@@ -3,7 +3,7 @@
 //  DogeKeeper
 //
 //  Created by Andrew on 5/19/14.
-//  Copyright (c) 2014 Andrew Arpasi. Licensed under CC BY-NC-SA 4.0
+//  Copyright (c) 2014 Andrew Arpasi. Licensed under CC BY-NC-ND 4.0
 //
 
 #import "SettingsViewController.h"
