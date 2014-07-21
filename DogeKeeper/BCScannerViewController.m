@@ -17,9 +17,6 @@
 //	limitations under the License.
 //
 
-//Changes made:
-//Added Cancel button and label when view controller appears.
-
 #import "BCScannerViewController.h"
 
 #import "BCVideoPreviewView.h"

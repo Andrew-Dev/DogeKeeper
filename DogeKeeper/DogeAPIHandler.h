@@ -27,6 +27,6 @@
 -(NSNumber*)getDogeAPIBalance;
 -(NSNumber*)getDogeUSDRate;
 -(NSNumber*)getDogeBTCRate;
--(BOOL)addNewAddress;
+-(BOOL)addNewAddress:(NSString*)addressName;
 
 @end

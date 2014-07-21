@@ -18,4 +18,5 @@
 
 +(NSMutableArray*)getAllTransactions;
 +(void)addTransactionToHistory:(DogeTransaction*)transaction;
+
 @end

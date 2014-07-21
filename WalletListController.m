@@ -22,6 +22,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if([[NSUserDefaults standardUserDefaults] boolForKey:@"firstrun"] != TRUE)
+    {
+        [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"addfee"];
+        [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"firstrun"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        NSLog(@"first run");
+    }
+    if([[NSUserDefaults standardUserDefaults] boolForKey:@"disabled"] == TRUE)
+    {
+        [self performSegueWithIdentifier:@"disabledSegue" sender:nil];
+        return;
+    }
     refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     [walletListView addSubview:refreshControl];

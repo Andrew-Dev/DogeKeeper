@@ -38,6 +38,9 @@
     {
         setupView.hidden = FALSE;
     }
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.extendedLayoutIncludesOpaqueBars = NO;
+    self.automaticallyAdjustsScrollViewInsets = NO;
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(recieveNotif:) name:@"SendSuccessNotification" object:nil];
     // Do any additional setup after loading the view.
 }
@@ -75,30 +78,45 @@
 }
 -(IBAction)addAddressButton:(id)sender
 {
-    topBar.topItem.title = @"Loading...";
-    [addressButton setTitle:@"Loading..." forState:UIControlStateNormal];
-    reloadButton.enabled = FALSE;
-    addressButton.enabled = FALSE;
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,
-                                             (unsigned long)NULL), ^(void) {
-        DogeAPIHandler * api = [[DogeAPIHandler alloc] init];
-        if(![api addNewAddress])
-        {
-            dispatch_sync(dispatch_get_main_queue(), ^{
-                UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Error" message:[api getError] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-                [alert show];
-            });
-        }
-        
-        dispatch_sync(dispatch_get_main_queue(), ^{
-            topBar.topItem.title = @"Send/Recieve";
-            [addressButton setTitle:@"New Address" forState:UIControlStateNormal];
-            reloadButton.enabled = TRUE;
-            addressButton.enabled = TRUE;
-            [addressTable reloadData];
-        });
-    
-    });
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Create New Address" message:[NSString stringWithFormat:@"Enter a label for the address. Leave blank to use no label."] delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Create",nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    alert.tag = 98; //go josh!
+    [alert textFieldAtIndex:0].delegate = self;
+    [alert show];
+}
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(alertView.tag == 98 && buttonIndex == 1){
+        topBar.topItem.title = @"Loading...";
+        [addressButton setTitle:@"Loading..." forState:UIControlStateNormal];
+        reloadButton.enabled = FALSE;
+        addressButton.enabled = FALSE;
+       dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,
+                                                (unsigned long)NULL), ^(void) {
+           UITextField * labelField = [alertView textFieldAtIndex:0];
+           DogeAPIHandler * api = [[DogeAPIHandler alloc] init];
+           if([api addNewAddress:labelField.text])
+           {
+               dispatch_sync(dispatch_get_main_queue(), ^{
+                   [self reloadAddresses];
+               });
+           }
+           else
+           {
+               UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Error" message:[api getError] delegate:self   cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+               dispatch_sync(dispatch_get_main_queue(), ^{
+                   [alert show];
+               });
+            
+           }
+           dispatch_sync(dispatch_get_main_queue(), ^{
+               addressButton.enabled = TRUE;
+               reloadButton.enabled = TRUE;
+               [addressButton setTitle:@"New Address" forState:UIControlStateNormal];
+               topBar.topItem.title = @"Send/Recieve";
+           });
+       });
+    }
 }
 -(void)reload{
     
@@ -152,6 +170,38 @@
         });
     });
     
+}
+-(void)reloadAddresses
+{
+    topBar.topItem.title = @"Loading...";
+    [reloadButton setTitle:@"Loading..." forState:UIControlStateNormal];
+    reloadButton.enabled = FALSE;
+    addressButton.enabled = FALSE;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,
+                                             (unsigned long)NULL), ^(void) {
+        DogeAPIHandler * api = [[DogeAPIHandler alloc] init];
+        if([api getAllDogeAPIAddresses] != nil)
+        {
+            addresses = [api getAllDogeAPIAddresses];
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                [addressTable reloadData];
+            });
+        }
+        else
+        {
+            UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Error" message:[api getError] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                [alert show];
+            });
+        }
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            balanceLabel.text = [NSString stringWithFormat:@"%f DOGE",[balance doubleValue]];
+            topBar.topItem.title = @"Send/Recieve";
+            [reloadButton setTitle:@"Refresh Data" forState:UIControlStateNormal];
+            reloadButton.enabled = TRUE;
+            addressButton.enabled = TRUE;
+        });
+    });
 }
 -(IBAction)send:(id)sender
 {

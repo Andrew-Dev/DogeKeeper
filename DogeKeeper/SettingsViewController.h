@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "DogeAPIHandler.h"
+#import "EncryptionHelper.h"
 
 @interface SettingsViewController : UIViewController
 {
     DogeAPIHandler * api;
     IBOutlet UIButton * unlinkButton;
+    IBOutlet UISwitch * feeSwitch;
+    IBOutlet UIButton * setPassButton;
+    IBOutlet UIButton * removePassButton;
 }
 @end

@@ -22,6 +22,15 @@
 		4911D6681926F25D009B9C5B /* DogeKeeperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4911D6671926F25D009B9C5B /* DogeKeeperTests.m */; };
 		4911D6731926FA5F009B9C5B /* DogeAPIHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4911D6721926FA5F009B9C5B /* DogeAPIHandler.m */; };
 		4911D6781927090B009B9C5B /* dogecoind.png in Resources */ = {isa = PBXBuildFile; fileRef = 4911D6771927090B009B9C5B /* dogecoind.png */; };
+		493BF7A2196E2F0F00947A05 /* EncryptionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 493BF7A1196E2F0F00947A05 /* EncryptionHelper.m */; };
+		493BF7A4196E305000947A05 /* lock-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 493BF7A3196E305000947A05 /* lock-32.png */; };
+		4940B91A196CE84C008D95CE /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4940B90F196CE84C008D95CE /* .gitignore */; };
+		4940B91B196CE84C008D95CE /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4940B911196CE84C008D95CE /* AESCrypt.m */; };
+		4940B91C196CE84C008D95CE /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4940B912196CE84C008D95CE /* LICENSE */; };
+		4940B91D196CE84C008D95CE /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4940B914196CE84C008D95CE /* NSData+Base64.m */; };
+		4940B91E196CE84C008D95CE /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 4940B916196CE84C008D95CE /* NSData+CommonCrypto.m */; };
+		4940B91F196CE84C008D95CE /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4940B918196CE84C008D95CE /* NSString+Base64.m */; };
+		4940B920196CE84C008D95CE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4940B919196CE84C008D95CE /* README.md */; };
 		49448D3619468B6800765F66 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49448D3119468B6800765F66 /* AVFoundation.framework */; };
 		49448D3719468B6800765F66 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49448D3219468B6800765F66 /* CoreMedia.framework */; };
 		49448D3819468B6800765F66 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49448D3319468B6800765F66 /* CoreVideo.framework */; };
@@ -33,12 +42,15 @@
 		494C4C79192C1D8500545434 /* AddWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 494C4C78192C1D8500545434 /* AddWalletViewController.m */; };
 		494C4C7C192C1D8F00545434 /* DogeChainHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 494C4C7B192C1D8F00545434 /* DogeChainHandler.m */; };
 		494C4C7F192C1D9A00545434 /* DogecoinWallet.m in Sources */ = {isa = PBXBuildFile; fileRef = 494C4C7E192C1D9A00545434 /* DogecoinWallet.m */; };
+		49521D83196F204A00BFCF95 /* PassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49521D82196F204A00BFCF95 /* PassViewController.m */; };
+		4952F46C1970D89400FE9D96 /* Graveyard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4952F46B1970D89400FE9D96 /* Graveyard.storyboard */; };
 		49606ECF19299A33005072D2 /* ApiKeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49606ECE19299A33005072D2 /* ApiKeyViewController.m */; };
 		4975EA31192D77D600D136A9 /* TransactionCompleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4975EA30192D77D600D136A9 /* TransactionCompleteViewController.m */; };
 		498D03031943E731004BC0B0 /* dknobg.png in Resources */ = {isa = PBXBuildFile; fileRef = 498D03021943E731004BC0B0 /* dknobg.png */; };
 		498D03061943E963004BC0B0 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 498D03051943E963004BC0B0 /* AboutViewController.m */; };
 		499705D91927D6CE00C53D78 /* DogeTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 499705D81927D6CE00C53D78 /* DogeTransaction.m */; };
 		499705DC1927D9DF00C53D78 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 499705DB1927D9DF00C53D78 /* MainViewController.m */; };
+		499705DF1927DE4C00C53D78 /* ExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 499705DE1927DE4C00C53D78 /* ExchangeViewController.m */; };
 		499705E21927DFFE00C53D78 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 499705E11927DFFE00C53D78 /* WelcomeViewController.m */; };
 		499705E51927E06100C53D78 /* WalletsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 499705E41927E06100C53D78 /* WalletsViewController.m */; };
 		499705E81927E78000C53D78 /* SendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 499705E71927E78000C53D78 /* SendViewController.m */; };
@@ -96,6 +108,20 @@
 		4911D6711926FA5F009B9C5B /* DogeAPIHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DogeAPIHandler.h; sourceTree = "<group>"; };
 		4911D6721926FA5F009B9C5B /* DogeAPIHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DogeAPIHandler.m; sourceTree = "<group>"; wrapsLines = 0; };
 		4911D6771927090B009B9C5B /* dogecoind.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dogecoind.png; sourceTree = "<group>"; };
+		493BF7A0196E2F0F00947A05 /* EncryptionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EncryptionHelper.h; sourceTree = "<group>"; };
+		493BF7A1196E2F0F00947A05 /* EncryptionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EncryptionHelper.m; sourceTree = "<group>"; };
+		493BF7A3196E305000947A05 /* lock-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lock-32.png"; sourceTree = "<group>"; };
+		4940B90F196CE84C008D95CE /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		4940B910196CE84C008D95CE /* AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCrypt.h; sourceTree = "<group>"; };
+		4940B911196CE84C008D95CE /* AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCrypt.m; sourceTree = "<group>"; };
+		4940B912196CE84C008D95CE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		4940B913196CE84C008D95CE /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		4940B914196CE84C008D95CE /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		4940B915196CE84C008D95CE /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
+		4940B916196CE84C008D95CE /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
+		4940B917196CE84C008D95CE /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		4940B918196CE84C008D95CE /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		4940B919196CE84C008D95CE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		49448D3119468B6800765F66 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		49448D3219468B6800765F66 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		49448D3319468B6800765F66 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
@@ -113,6 +139,9 @@
 		494C4C7B192C1D8F00545434 /* DogeChainHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DogeChainHandler.m; sourceTree = "<group>"; };
 		494C4C7D192C1D9A00545434 /* DogecoinWallet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DogecoinWallet.h; sourceTree = "<group>"; };
 		494C4C7E192C1D9A00545434 /* DogecoinWallet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DogecoinWallet.m; sourceTree = "<group>"; };
+		49521D81196F204A00BFCF95 /* PassViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassViewController.h; sourceTree = "<group>"; };
+		49521D82196F204A00BFCF95 /* PassViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassViewController.m; sourceTree = "<group>"; };
+		4952F46B1970D89400FE9D96 /* Graveyard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Graveyard.storyboard; sourceTree = "<group>"; };
 		49606ECD19299A33005072D2 /* ApiKeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApiKeyViewController.h; sourceTree = "<group>"; };
 		49606ECE19299A33005072D2 /* ApiKeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiKeyViewController.m; sourceTree = "<group>"; };
 		4975EA2F192D77D600D136A9 /* TransactionCompleteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransactionCompleteViewController.h; sourceTree = "<group>"; };
@@ -124,6 +153,8 @@
 		499705D81927D6CE00C53D78 /* DogeTransaction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DogeTransaction.m; sourceTree = "<group>"; };
 		499705DA1927D9DF00C53D78 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		499705DB1927D9DF00C53D78 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		499705DD1927DE4C00C53D78 /* ExchangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExchangeViewController.h; path = ../ExchangeViewController.h; sourceTree = "<group>"; };
+		499705DE1927DE4C00C53D78 /* ExchangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExchangeViewController.m; path = ../ExchangeViewController.m; sourceTree = "<group>"; };
 		499705E01927DFFE00C53D78 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WelcomeViewController.h; path = ../WelcomeViewController.h; sourceTree = "<group>"; };
 		499705E11927DFFE00C53D78 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WelcomeViewController.m; path = ../WelcomeViewController.m; sourceTree = "<group>"; };
 		499705E31927E06100C53D78 /* WalletsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalletsViewController.h; sourceTree = "<group>"; };
@@ -237,6 +268,7 @@
 				49448D61194693F100765F66 /* Private */,
 				49448D5E1946913200765F66 /* BCScannerViewController.h */,
 				49448D5F1946913200765F66 /* BCScannerViewController.m */,
+				4940B90E196CE84C008D95CE /* AESCrypt */,
 				49DDD466194E026200C3C6FD /* QR */,
 				4911D6771927090B009B9C5B /* dogecoind.png */,
 				49E381D4194B83AD00E38558 /* donate.jpeg */,
@@ -249,15 +281,21 @@
 				49DDD48A194E80D100C3C6FD /* wallet-32.png */,
 				49DDD48C194E80DD00C3C6FD /* settings-32.png */,
 				49DDD48E194E811000C3C6FD /* line_chart-32.png */,
+				493BF7A3196E305000947A05 /* lock-32.png */,
 				4911D6711926FA5F009B9C5B /* DogeAPIHandler.h */,
 				4911D6721926FA5F009B9C5B /* DogeAPIHandler.m */,
+				493BF7A0196E2F0F00947A05 /* EncryptionHelper.h */,
+				493BF7A1196E2F0F00947A05 /* EncryptionHelper.m */,
 				494C4C7A192C1D8F00545434 /* DogeChainHandler.h */,
 				494C4C7B192C1D8F00545434 /* DogeChainHandler.m */,
 				494C4C7D192C1D9A00545434 /* DogecoinWallet.h */,
 				494C4C7E192C1D9A00545434 /* DogecoinWallet.m */,
 				499705D71927D6CE00C53D78 /* DogeTransaction.h */,
 				499705D81927D6CE00C53D78 /* DogeTransaction.m */,
+				4952F46B1970D89400FE9D96 /* Graveyard.storyboard */,
 				4911D6481926F25D009B9C5B /* Main_iPhone.storyboard */,
+				49521D81196F204A00BFCF95 /* PassViewController.h */,
+				49521D82196F204A00BFCF95 /* PassViewController.m */,
 				4975EA2F192D77D600D136A9 /* TransactionCompleteViewController.h */,
 				4975EA30192D77D600D136A9 /* TransactionCompleteViewController.m */,
 				49B82A18194CE0FD00B9B4B6 /* HistoryViewController.h */,
@@ -280,6 +318,8 @@
 				499705E41927E06100C53D78 /* WalletsViewController.m */,
 				499705DA1927D9DF00C53D78 /* MainViewController.h */,
 				499705DB1927D9DF00C53D78 /* MainViewController.m */,
+				499705DD1927DE4C00C53D78 /* ExchangeViewController.h */,
+				499705DE1927DE4C00C53D78 /* ExchangeViewController.m */,
 				499705E01927DFFE00C53D78 /* WelcomeViewController.h */,
 				499705E11927DFFE00C53D78 /* WelcomeViewController.m */,
 				498D03041943E963004BC0B0 /* AboutViewController.h */,
@@ -317,6 +357,24 @@
 				4911D6641926F25D009B9C5B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4940B90E196CE84C008D95CE /* AESCrypt */ = {
+			isa = PBXGroup;
+			children = (
+				4940B90F196CE84C008D95CE /* .gitignore */,
+				4940B910196CE84C008D95CE /* AESCrypt.h */,
+				4940B911196CE84C008D95CE /* AESCrypt.m */,
+				4940B912196CE84C008D95CE /* LICENSE */,
+				4940B913196CE84C008D95CE /* NSData+Base64.h */,
+				4940B914196CE84C008D95CE /* NSData+Base64.m */,
+				4940B915196CE84C008D95CE /* NSData+CommonCrypto.h */,
+				4940B916196CE84C008D95CE /* NSData+CommonCrypto.m */,
+				4940B917196CE84C008D95CE /* NSString+Base64.h */,
+				4940B918196CE84C008D95CE /* NSString+Base64.m */,
+				4940B919196CE84C008D95CE /* README.md */,
+			);
+			path = AESCrypt;
 			sourceTree = "<group>";
 		};
 		49448D61194693F100765F66 /* Private */ = {
@@ -406,6 +464,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Andrew Arpasi";
 				TargetAttributes = {
+					4911D6321926F25C009B9C5B = {
+						DevelopmentTeam = NJKXF7XV99;
+					};
 					4911D6591926F25D009B9C5B = {
 						TestTargetID = 4911D6321926F25C009B9C5B;
 					};
@@ -438,6 +499,7 @@
 				49DDD485194E802000C3C6FD /* money-128.png in Resources */,
 				49E381D5194B83AE00E38558 /* donate.jpeg in Resources */,
 				49DDD484194E802000C3C6FD /* bar-128.png in Resources */,
+				4952F46C1970D89400FE9D96 /* Graveyard.storyboard in Resources */,
 				498D03031943E731004BC0B0 /* dknobg.png in Resources */,
 				4911D6781927090B009B9C5B /* dogecoind.png in Resources */,
 				4911D6551926F25D009B9C5B /* Images.xcassets in Resources */,
@@ -445,6 +507,10 @@
 				49DDD48B194E80D100C3C6FD /* wallet-32.png in Resources */,
 				49DDD48D194E80DD00C3C6FD /* settings-32.png in Resources */,
 				49DDD486194E802000C3C6FD /* settings-128.png in Resources */,
+				4940B91C196CE84C008D95CE /* LICENSE in Resources */,
+				4940B920196CE84C008D95CE /* README.md in Resources */,
+				4940B91A196CE84C008D95CE /* .gitignore in Resources */,
+				493BF7A4196E305000947A05 /* lock-32.png in Resources */,
 				49DDD489194E809000C3C6FD /* money-32.png in Resources */,
 				49DDD48F194E811000C3C6FD /* line_chart-32.png in Resources */,
 				4911D64A1926F25D009B9C5B /* Main_iPhone.storyboard in Resources */,
@@ -472,16 +538,22 @@
 				4911D6731926FA5F009B9C5B /* DogeAPIHandler.m in Sources */,
 				49606ECF19299A33005072D2 /* ApiKeyViewController.m in Sources */,
 				49DDD47A194E026200C3C6FD /* qrencode.c in Sources */,
+				49521D83196F204A00BFCF95 /* PassViewController.m in Sources */,
 				49A1CB66192AD8EE00D4EA5F /* SettingsViewController.m in Sources */,
+				4940B91E196CE84C008D95CE /* NSData+CommonCrypto.m in Sources */,
 				49DDD47D194E026200C3C6FD /* rscode.c in Sources */,
 				494C4C79192C1D8500545434 /* AddWalletViewController.m in Sources */,
+				499705DF1927DE4C00C53D78 /* ExchangeViewController.m in Sources */,
 				49DDD478194E026200C3C6FD /* bitstream.c in Sources */,
 				4911D6471926F25D009B9C5B /* AppDelegate.m in Sources */,
 				49448D64194693F100765F66 /* BCVideoPreviewView.m in Sources */,
 				49DDD47C194E026200C3C6FD /* qrspec.c in Sources */,
 				49DDD479194E026200C3C6FD /* mask.c in Sources */,
+				4940B91D196CE84C008D95CE /* NSData+Base64.m in Sources */,
+				493BF7A2196E2F0F00947A05 /* EncryptionHelper.m in Sources */,
 				499705D91927D6CE00C53D78 /* DogeTransaction.m in Sources */,
 				49DDD47B194E026200C3C6FD /* qrinput.c in Sources */,
+				4940B91B196CE84C008D95CE /* AESCrypt.m in Sources */,
 				49B82A20194CED2100B9B4B6 /* WalletDetailViewController.m in Sources */,
 				49DDD47F194E026200C3C6FD /* UIImage+MDQRCode.m in Sources */,
 				49DDD47E194E026200C3C6FD /* split.c in Sources */,
@@ -496,6 +568,7 @@
 				499705E21927DFFE00C53D78 /* WelcomeViewController.m in Sources */,
 				4911D6431926F25C009B9C5B /* main.m in Sources */,
 				499705EB1927E82D00C53D78 /* DogeViewController.m in Sources */,
+				4940B91F196CE84C008D95CE /* NSString+Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -622,14 +695,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Paul Arpasi (NJKXF7XV99)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DogeKeeper/DogeKeeper-Prefix.pch";
 				INFOPLIST_FILE = "DogeKeeper/DogeKeeper-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DogeKeeper/ZBarSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "D63C0EB6-204A-4DC9-939D-FB0322F1DA1B";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -640,14 +716,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Paul Arpasi (NJKXF7XV99)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DogeKeeper/DogeKeeper-Prefix.pch";
 				INFOPLIST_FILE = "DogeKeeper/DogeKeeper-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DogeKeeper/ZBarSDK",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "D63C0EB6-204A-4DC9-939D-FB0322F1DA1B";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

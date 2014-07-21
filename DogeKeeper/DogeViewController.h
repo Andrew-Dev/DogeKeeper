@@ -11,7 +11,7 @@
 #import "DogecoinWallet.h"
 #import "WalletDetailViewController.h"
 
-@interface DogeViewController : UIViewController <UITableViewDelegate,UITableViewDataSource>
+@interface DogeViewController : UIViewController <UITableViewDelegate,UITableViewDataSource,UIAlertViewDelegate,UITextFieldDelegate>
 {
     IBOutlet UILabel * balanceLabel;
     IBOutlet UITableView * addressTable;

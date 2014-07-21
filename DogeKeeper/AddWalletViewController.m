@@ -50,6 +50,7 @@
 -(IBAction)scanQR:(id)sender
 {
     if ([BCScannerViewController scannerAvailable]) {
+        NSLog(@"the crap is available");
 		BCScannerViewController *scanner = [[BCScannerViewController alloc] init];
 		scanner.delegate = self;
 		scanner.codeTypes = @[ BCScannerQRCode ];
@@ -88,7 +89,7 @@
     {
         code = [code stringByReplacingOccurrencesOfString:@"dogecoin:" withString:@""];
     }
-    addressField.text = code;
+    addressField.text = [code substringToIndex:34];
 	NSLog(@"Added: [%@]", codes);
 }
 

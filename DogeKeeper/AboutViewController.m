@@ -53,6 +53,10 @@
 {
     [self openWebURL:@"http://twitter.com/DogeKeeper"];
 }
+-(IBAction)dogeKeeperGitHub:(id)sender
+{
+    [self openWebURL:@"http://github.com/Andrew-Dev/DogeKeeper"];
+}
 -(IBAction)dogeAPI:(id)sender
 {
     [self openWebURL:@"http://dogeapi.com"];

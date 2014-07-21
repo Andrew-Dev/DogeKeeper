@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="8YX-ce-x5E">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
@@ -47,21 +48,18 @@
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wallet Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKt-RS-epG">
                                                     <rect key="frame" x="20" y="10" width="280" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="10" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U97-et-gxu">
-                                                    <rect key="frame" x="20" y="35" width="280" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <rect key="frame" x="20" y="37" width="294" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="15" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.000000000 DOGE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATe-mS-c0B">
                                                     <rect key="frame" x="20" y="64" width="280" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -85,6 +83,8 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Wallets" image="Wallet" id="Z7h-1E-pvt"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="navBar" destination="rjj-wj-dhR" id="4RG-3P-KbT"/>
                         <outlet property="walletListView" destination="39p-lk-SIB" id="mhZ-md-Ikn"/>
@@ -102,10 +102,11 @@
             <objects>
                 <tabBarController id="8YX-ce-x5E" customClass="MainViewController" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="JQR-rB-NYL">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="0.71182316599999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="QUy-BD-bpt" kind="relationship" relationship="viewControllers" id="M8t-EP-wfW"/>
@@ -176,7 +177,7 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aoC-Jc-t8K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-280" y="202"/>
+            <point key="canvasLocation" x="-318" y="224"/>
         </scene>
         <!--Doge View Controller - Send/Recieve-->
         <scene sceneID="cGa-Vy-iX1">
@@ -187,7 +188,7 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                         <viewControllerLayoutGuide type="bottom" id="v2y-G0-ZyM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JLi-by-LG4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vZn-j9-D3t">
@@ -195,7 +196,7 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                                 <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqC-Sz-PyB">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="18" width="320" height="44"/>
                                 <color key="tintColor" red="1" green="0.71182316599999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
@@ -213,13 +214,13 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="00000000.0000 DOGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.35000000000000003" translatesAutoresizingMaskIntoConstraints="NO" id="I8O-1I-luY">
-                                <rect key="frame" x="19" y="81" width="282" height="61"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00000000.0000 DOGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.35000000000000003" translatesAutoresizingMaskIntoConstraints="NO" id="I8O-1I-luY">
+                                <rect key="frame" x="19" y="73" width="282" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="46" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ebm-VV-h5u">
-                                <rect key="frame" x="0.0" y="189" width="320" height="330"/>
+                                <rect key="frame" x="0.0" y="176" width="320" height="343"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="46" id="qq8-ZC-dSc">
@@ -243,8 +244,8 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                                     <outlet property="delegate" destination="LcU-jh-a4m" id="6O9-he-zOY"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1j-15-O8Q">
-                                <rect key="frame" x="100" y="147" width="120" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1j-15-O8Q">
+                                <rect key="frame" x="19" y="134" width="140" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Refresh Data">
                                     <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -254,13 +255,22 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                                     <action selector="refreshButtonPress:" destination="LcU-jh-a4m" eventType="touchUpInside" id="4Pk-Qx-0PK"/>
                                 </connections>
                             </button>
-                            <view hidden="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SEm-cv-g23">
-                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4q-pB-Sma">
+                                <rect key="frame" x="161" y="134" width="140" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="New Address">
+                                    <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addAddressButton:" destination="LcU-jh-a4m" eventType="touchUpInside" id="LbK-E6-B0g"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SEm-cv-g23">
+                                <rect key="frame" x="0.0" y="62" width="320" height="457"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DogeAPI Setup Required" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3f-Lx-bu6">
                                         <rect key="frame" x="18" y="30" width="285" height="63"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -276,20 +286,19 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SEm-cv-g23" firstAttribute="leading" secondItem="JLi-by-LG4" secondAttribute="leading" id="75u-TB-zem"/>
-                            <constraint firstItem="v2y-G0-ZyM" firstAttribute="top" secondItem="SEm-cv-g23" secondAttribute="bottom" id="LUI-2Y-KLk"/>
-                            <constraint firstAttribute="trailing" secondItem="SEm-cv-g23" secondAttribute="trailing" id="UZC-E0-Ic2"/>
-                            <constraint firstItem="v2y-G0-ZyM" firstAttribute="top" secondItem="Ebm-VV-h5u" secondAttribute="bottom" id="aGf-S4-e2e"/>
-                            <constraint firstItem="SEm-cv-g23" firstAttribute="top" secondItem="eqC-Sz-PyB" secondAttribute="bottom" id="e5O-on-Tdq"/>
-                            <constraint firstItem="Ebm-VV-h5u" firstAttribute="top" secondItem="N1j-15-O8Q" secondAttribute="bottom" constant="8" id="kTC-gh-JAW"/>
-                            <constraint firstItem="N1j-15-O8Q" firstAttribute="top" secondItem="I8O-1I-luY" secondAttribute="bottom" constant="5" id="oj4-V4-Dbf"/>
-                            <constraint firstItem="I8O-1I-luY" firstAttribute="leading" secondItem="JLi-by-LG4" secondAttribute="leading" constant="19" id="qfc-fW-kI0"/>
-                            <constraint firstItem="I8O-1I-luY" firstAttribute="top" secondItem="eqC-Sz-PyB" secondAttribute="bottom" constant="17" id="yx6-GX-vQf"/>
-                            <constraint firstAttribute="trailing" secondItem="I8O-1I-luY" secondAttribute="trailing" constant="19" id="z4z-lI-6vT"/>
+                            <constraint firstItem="SEm-cv-g23" firstAttribute="leading" secondItem="JLi-by-LG4" secondAttribute="leading" id="29r-WX-gRq"/>
+                            <constraint firstItem="v2y-G0-ZyM" firstAttribute="top" secondItem="Ebm-VV-h5u" secondAttribute="bottom" id="4MI-TX-0ZA"/>
+                            <constraint firstAttribute="trailing" secondItem="SEm-cv-g23" secondAttribute="trailing" id="Ffp-YF-N2a"/>
+                            <constraint firstItem="v2y-G0-ZyM" firstAttribute="top" secondItem="SEm-cv-g23" secondAttribute="bottom" id="H4x-uz-l3S"/>
+                            <constraint firstItem="SEm-cv-g23" firstAttribute="top" secondItem="eqC-Sz-PyB" secondAttribute="bottom" id="ZTh-BT-Y5W"/>
+                            <constraint firstAttribute="trailing" secondItem="Ebm-VV-h5u" secondAttribute="trailing" id="dJJ-v3-0Em"/>
+                            <constraint firstItem="Ebm-VV-h5u" firstAttribute="top" secondItem="l4q-pB-Sma" secondAttribute="bottom" constant="8" id="dRG-se-A1L"/>
+                            <constraint firstItem="Ebm-VV-h5u" firstAttribute="leading" secondItem="JLi-by-LG4" secondAttribute="leading" id="p8u-s2-7R9"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Send/Recieve" image="Coins" id="aNZ-nU-guD"/>
                     <connections>
+                        <outlet property="addressButton" destination="l4q-pB-Sma" id="8KL-FR-BEn"/>
                         <outlet property="addressTable" destination="Ebm-VV-h5u" id="OZV-Fh-c2X"/>
                         <outlet property="balanceLabel" destination="I8O-1I-luY" id="2Fd-Ud-2Rl"/>
                         <outlet property="histBtn" destination="ffg-QO-Ssj" id="yHF-60-pcP"/>
@@ -449,7 +458,7 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                     <color key="barTintColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                 </toolbar>
             </objects>
-            <point key="canvasLocation" x="1075" y="1204"/>
+            <point key="canvasLocation" x="1075" y="1096"/>
         </scene>
         <!--Wallet Detail View Controller - Transactions-->
         <scene sceneID="BVd-Dl-L8K">
@@ -467,7 +476,7 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
                                 <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onJ-QF-9pd">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onJ-QF-9pd">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <color key="tintColor" red="1" green="0.71182316599999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -481,43 +490,99 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mzC-DT-haJ">
-                                <rect key="frame" x="50" y="133" width="220" height="220"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="address" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UlT-Jf-1Ib">
-                                <rect key="frame" x="7" y="361" width="307" height="37"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wallet Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmi-5e-cqJ">
-                                <rect key="frame" x="22" y="84" width="276" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Balance:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="uDo-dK-bAe">
-                                <rect key="frame" x="20" y="406" width="280" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Recieved:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="NYf-1J-hws">
-                                <rect key="frame" x="20" y="435" width="280" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PIN-b2-Ge4">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Btk-c4-iBk" firstAttribute="top" secondItem="PIN-b2-Ge4" secondAttribute="bottom" id="2GV-8w-B5i"/>
+                            <constraint firstItem="PIN-b2-Ge4" firstAttribute="top" secondItem="onJ-QF-9pd" secondAttribute="bottom" id="Ndn-bR-RTl"/>
+                            <constraint firstItem="PIN-b2-Ge4" firstAttribute="leading" secondItem="Ubo-v2-ucE" secondAttribute="leading" id="hty-Ej-Zbs"/>
+                            <constraint firstAttribute="trailing" secondItem="PIN-b2-Ge4" secondAttribute="trailing" id="vfN-6C-G3m"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Transactions" image="second" id="LkP-xS-qds"/>
                     <connections>
                         <outlet property="addressView" destination="UlT-Jf-1Ib" id="hgg-Ws-dlT"/>
+                        <outlet property="amountField" destination="R3Z-Je-ZnF" id="YtR-5q-AMs"/>
                         <outlet property="balanceLabel" destination="uDo-dK-bAe" id="KAO-rl-lop"/>
+                        <outlet property="detailView" destination="YSD-oL-YGM" id="nix-iO-GxF"/>
+                        <outlet property="keyboardBar" destination="QNv-gO-mjc" id="oGm-nZ-cOv"/>
                         <outlet property="qrView" destination="mzC-DT-haJ" id="8Iw-RS-oBo"/>
                         <outlet property="recievedLabel" destination="NYf-1J-hws" id="YV9-xP-86h"/>
+                        <outlet property="scrollView" destination="PIN-b2-Ge4" id="lC2-UM-Tpw"/>
                         <outlet property="titleLabel" destination="hmi-5e-cqJ" id="ZZM-Rs-R1K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nUC-qY-GlS" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="YSD-oL-YGM" userLabel="Detail View">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mzC-DT-haJ">
+                            <rect key="frame" x="50" y="61" width="220" height="220"/>
+                        </imageView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="address" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UlT-Jf-1Ib">
+                            <rect key="frame" x="7" y="288" width="307" height="28"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Balance:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="uDo-dK-bAe">
+                            <rect key="frame" x="24" y="359" width="280" height="21"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Recieved:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="NYf-1J-hws">
+                            <rect key="frame" x="24" y="384" width="280" height="21"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Request" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="uDr-8s-rUF">
+                            <rect key="frame" x="50" y="325" width="62" height="21"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DOGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="fmB-cW-5qh">
+                            <rect key="frame" x="217" y="325" width="47" height="21"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wallet Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmi-5e-cqJ">
+                            <rect key="frame" x="22" y="12" width="276" height="41"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00000000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R3Z-Je-ZnF">
+                            <rect key="frame" x="120" y="321" width="89" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad"/>
+                            <connections>
+                                <action selector="amountFieldChanged:" destination="6CW-o5-Obt" eventType="editingChanged" id="Ar6-fj-71h"/>
+                            </connections>
+                        </textField>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kSw-IM-fxs">
+                            <rect key="frame" x="120" y="350" width="89" height="1"/>
+                            <color key="backgroundColor" red="0.7875844595" green="0.7875844595" blue="0.7875844595" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" id="QNv-gO-mjc">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="97C-8I-tw9"/>
+                        <barButtonItem title="Done" id="f3S-ep-E0q">
+                            <connections>
+                                <action selector="keyboardDone:" destination="6CW-o5-Obt" id="9dt-hj-aOd"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <color key="tintColor" red="1" green="0.71182316599999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="barTintColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                </toolbar>
             </objects>
             <point key="canvasLocation" x="1075" y="418"/>
         </scene>
@@ -530,7 +595,7 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                         <viewControllerLayoutGuide type="bottom" id="R3C-HB-9ua"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="mvq-Wm-0Gh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mmt-CG-FRZ">
@@ -538,7 +603,7 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                                 <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sr3-5p-CXh">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="18" width="320" height="44"/>
                                 <color key="tintColor" red="1" green="0.71182316599999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
@@ -560,39 +625,49 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                                 </items>
                             </navigationBar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DogeAPI Setup:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="d37-4w-2gD">
-                                <rect key="frame" x="20" y="85" width="280" height="21"/>
+                                <rect key="frame" x="20" y="77" width="280" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Auto increase post-fee value to send desired amount." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="220" translatesAutoresizingMaskIntoConstraints="NO" id="VDc-5b-KAe">
+                                <rect key="frame" x="79" y="214" width="220" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fY-fL-lbK">
-                                <rect key="frame" x="40" y="114" width="240" height="46"/>
+                                <rect key="frame" x="40" y="106" width="240" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Set DogeAPI Key">
                                     <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="agree:" destination="Ope-4f-gzM" eventType="touchUpInside" id="hoD-XV-lNe"/>
                                     <action selector="setApi:" destination="hNG-6B-nNJ" eventType="touchUpInside" id="zX3-St-6rQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sdl-fy-T7E">
-                                <rect key="frame" x="40" y="168" width="240" height="46"/>
+                                <rect key="frame" x="40" y="160" width="240" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Unlink DogeAPI Key">
                                     <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="agree:" destination="Ope-4f-gzM" eventType="touchUpInside" id="ahb-BX-0S7"/>
                                     <action selector="removeApi:" destination="hNG-6B-nNJ" eventType="touchUpInside" id="lBy-be-BnI"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Xf-9C-anc">
+                                <rect key="frame" x="22" y="222" width="51" height="31"/>
+                                <connections>
+                                    <action selector="toggleFee:" destination="hNG-6B-nNJ" eventType="valueChanged" id="Wh0-Wi-kvL"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="Settings" id="9R0-lm-g4I"/>
                     <connections>
+                        <outlet property="feeSwitch" destination="2Xf-9C-anc" id="y7k-oG-ywY"/>
                         <outlet property="unlinkButton" destination="Sdl-fy-T7E" id="eH2-4R-uVY"/>
                         <segue destination="e41-Tz-RID" kind="modal" identifier="apiSegue" id="mgY-Db-HMT"/>
                         <segue destination="jJd-NA-HV9" kind="modal" identifier="aboutSegue" id="nQb-Nh-FDl"/>
@@ -600,7 +675,7 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1k-cr-S92" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="1908"/>
+            <point key="canvasLocation" x="653" y="1914"/>
         </scene>
         <!--Api Key View Controller - Settings-->
         <scene sceneID="jRx-Zk-9of">
@@ -684,26 +759,12 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jkG-Uv-QlP" sceneMemberID="firstResponder"/>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" id="ik2-l0-9Mw">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <items>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="iMC-Yf-Ucf"/>
-                        <barButtonItem title="Done" id="31G-tJ-ZD9">
-                            <connections>
-                                <action selector="keyboardDone:" destination="e41-Tz-RID" id="IJZ-g2-96R"/>
-                            </connections>
-                        </barButtonItem>
-                    </items>
-                    <color key="tintColor" red="1" green="0.71182316599999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="barTintColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                </toolbar>
                 <view contentMode="scaleToFill" id="QvL-6e-AdE" userLabel="Instruction View">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZ0-ra-JPD">
-                            <rect key="frame" x="40" y="433" width="240" height="37"/>
+                            <rect key="frame" x="40" y="448" width="240" height="37"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <state key="normal" title="Register DogeAPI Account">
                                 <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -715,7 +776,7 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTd-iI-OHU">
-                            <rect key="frame" x="40" y="478" width="240" height="37"/>
+                            <rect key="frame" x="40" y="493" width="240" height="37"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <state key="normal" title="DogeAPI Settings">
                                 <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -732,7 +793,7 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                             <nil key="highlightedColor"/>
                         </label>
                         <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10000" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="295" translatesAutoresizingMaskIntoConstraints="NO" id="w2W-vx-FRX">
-                            <rect key="frame" x="13" y="53" width="295" height="371"/>
+                            <rect key="frame" x="13" y="53" width="295" height="387"/>
                             <attributedString key="attributedText">
                                 <fragment>
                                     <string key="content">To send DOGE using DogeKeeper, you must
@@ -742,14 +803,14 @@ Once you have created your account and verified your e-mail address, you can get
                                     <attributes>
                                         <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <font key="NSFont" size="14" name="Helvetica-Light"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                     </attributes>
                                 </fragment>
                                 <fragment content="you must enable API access in your DogeAPI settings. ">
                                     <attributes>
                                         <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <font key="NSFont" size="14" name="Helvetica-Bold"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                     </attributes>
                                 </fragment>
                                 <fragment>
@@ -758,7 +819,7 @@ Once you have completed this process, paste your API key above and press 'Valida
                                     <attributes>
                                         <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         <font key="NSFont" size="14" name="Helvetica-Light"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                     </attributes>
                                 </fragment>
                             </attributedString>
@@ -767,8 +828,22 @@ Once you have completed this process, paste your API key above and press 'Valida
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" id="ik2-l0-9Mw">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="iMC-Yf-Ucf"/>
+                        <barButtonItem title="Done" id="31G-tJ-ZD9">
+                            <connections>
+                                <action selector="keyboardDone:" destination="e41-Tz-RID" id="IJZ-g2-96R"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <color key="tintColor" red="1" green="0.71182316599999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="barTintColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                </toolbar>
             </objects>
-            <point key="canvasLocation" x="1075" y="1908"/>
+            <point key="canvasLocation" x="1087" y="1914"/>
         </scene>
         <!--About View Controller - Settings-->
         <scene sceneID="d55-XT-l1R">
@@ -801,25 +876,21 @@ Once you have completed this process, paste your API key above and press 'Valida
                                     </navigationBar>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dknobg.png" translatesAutoresizingMaskIntoConstraints="NO" id="G6G-lr-HoP">
                                         <rect key="frame" x="20" y="75" width="100" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DogeKeeper" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9M-x5-Mlg">
                                         <rect key="frame" x="128" y="75" width="172" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="32"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="By Andrew Arpasi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdg-4i-xB0">
                                         <rect key="frame" x="128" y="112" width="172" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version 1.0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68H-iy-phg">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version 1.1.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68H-iy-phg">
                                         <rect key="frame" x="128" y="135" width="172" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -827,27 +898,24 @@ Once you have completed this process, paste your API key above and press 'Valida
                                 </subviews>
                                 <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To the moon!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymN-7p-To8">
-                                <rect key="frame" x="108" y="523" width="104" height="25"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="To the moon!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymN-7p-To8">
+                                <rect key="frame" x="108" y="533" width="104" height="25"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="13"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Credits:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5WK-T5-rPh">
                                 <rect key="frame" x="73" y="333" width="174" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="DogeCoin:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldY-sm-pUl">
                                 <rect key="frame" x="73" y="195" width="174" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="DogeKeeper" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62w-o7-ex7">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="DogeKeeper:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62w-o7-ex7">
                                 <rect key="frame" x="73" y="264" width="174" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -891,7 +959,7 @@ Once you have completed this process, paste your API key above and press 'Valida
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rg8-7O-Ki3">
-                                <rect key="frame" x="56" y="291" width="100" height="40"/>
+                                <rect key="frame" x="110" y="291" width="100" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Website">
                                     <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -904,7 +972,7 @@ Once you have completed this process, paste your API key above and press 'Valida
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6P-g3-JZh">
-                                <rect key="frame" x="164" y="291" width="100" height="40"/>
+                                <rect key="frame" x="13" y="291" width="100" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="On Twitter">
                                     <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -916,8 +984,19 @@ Once you have completed this process, paste your API key above and press 'Valida
                                     <action selector="setApi:" destination="hNG-6B-nNJ" eventType="touchUpInside" id="3lO-Yp-eT0"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAs-ZZ-ZNO">
+                                <rect key="frame" x="218" y="291" width="100" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="On GitHub">
+                                    <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dogeKeeperGitHub:" destination="jJd-NA-HV9" eventType="touchUpInside" id="qVU-EY-Miu"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Elw-Up-f6x">
-                                <rect key="frame" x="3" y="408" width="117" height="40"/>
+                                <rect key="frame" x="5" y="408" width="117" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="BCScanner">
                                     <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -930,7 +1009,7 @@ Once you have completed this process, paste your API key above and press 'Valida
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2r-cH-jlt">
-                                <rect key="frame" x="235" y="408" width="79" height="40"/>
+                                <rect key="frame" x="229" y="408" width="79" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Icons8">
                                     <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -943,7 +1022,7 @@ Once you have completed this process, paste your API key above and press 'Valida
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yUH-pk-t7D">
-                                <rect key="frame" x="128" y="408" width="99" height="40"/>
+                                <rect key="frame" x="121" y="408" width="99" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="QR Encoder">
                                     <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -963,9 +1042,7 @@ Once you have completed this process, paste your API key above and press 'Valida
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="agree:" destination="Ope-4f-gzM" eventType="touchUpInside" id="5Q3-j8-EyG"/>
                                     <action selector="dogeChain:" destination="jJd-NA-HV9" eventType="touchUpInside" id="csE-wa-14x"/>
-                                    <action selector="setApi:" destination="hNG-6B-nNJ" eventType="touchUpInside" id="a3o-2q-n41"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -973,10 +1050,11 @@ Once you have completed this process, paste your API key above and press 'Valida
                         <constraints>
                             <constraint firstItem="MyM-Xj-0eS" firstAttribute="top" secondItem="5WK-T5-rPh" secondAttribute="bottom" constant="2" id="22X-64-lvk"/>
                             <constraint firstItem="Rg8-7O-Ki3" firstAttribute="top" secondItem="62w-o7-ex7" secondAttribute="bottom" constant="2" id="9KX-AK-DoQ"/>
+                            <constraint firstItem="Mfk-qE-Vwy" firstAttribute="top" secondItem="ymN-7p-To8" secondAttribute="bottom" constant="10" id="Bst-y0-nhm"/>
                             <constraint firstItem="yUH-pk-t7D" firstAttribute="top" secondItem="KBU-p3-xB4" secondAttribute="bottom" constant="8" id="Ffo-Og-C5q"/>
+                            <constraint firstItem="l2r-cH-jlt" firstAttribute="top" secondItem="KBU-p3-xB4" secondAttribute="bottom" constant="8" id="Gmx-3F-PmW"/>
                             <constraint firstItem="t6P-g3-JZh" firstAttribute="top" secondItem="62w-o7-ex7" secondAttribute="bottom" constant="2" id="KQ3-Lv-U9i"/>
                             <constraint firstItem="Elw-Up-f6x" firstAttribute="top" secondItem="MyM-Xj-0eS" secondAttribute="bottom" constant="8" id="N2K-fd-aMY"/>
-                            <constraint firstItem="l2r-cH-jlt" firstAttribute="top" secondItem="KBU-p3-xB4" secondAttribute="bottom" constant="8" id="Vvz-DW-7x9"/>
                             <constraint firstItem="5WK-T5-rPh" firstAttribute="top" secondItem="t6P-g3-JZh" secondAttribute="bottom" constant="2" id="a6c-ZG-8df"/>
                             <constraint firstItem="ldY-sm-pUl" firstAttribute="top" secondItem="uDH-vj-68g" secondAttribute="bottom" constant="8" id="bP0-70-tdu"/>
                             <constraint firstItem="62w-o7-ex7" firstAttribute="top" secondItem="sfR-j2-fTk" secondAttribute="bottom" constant="2" id="gA7-do-Dzb"/>
@@ -989,7 +1067,7 @@ Once you have completed this process, paste your API key above and press 'Valida
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uD9-ao-rGg" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1075" y="2589"/>
+            <point key="canvasLocation" x="1087" y="2601"/>
         </scene>
         <!--Add Wallet View Controller - Transactions-->
         <scene sceneID="3Kv-TN-AgF">
@@ -1114,7 +1192,7 @@ Once you have completed this process, paste your API key above and press 'Valida
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0 DOGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="kzN-en-6Ch">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0 DOGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kzN-en-6Ch">
                                 <rect key="frame" x="11" y="66" width="300" height="66"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1139,7 +1217,6 @@ Once you have completed this process, paste your API key above and press 'Valida
                             </label>
                             <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="donate.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="OYP-tM-AwT">
                                 <rect key="frame" x="50" y="267" width="220" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Heh-7A-XNj"/>
                                     <constraint firstAttribute="width" constant="220" id="bbt-ms-oHT"/>
@@ -1167,7 +1244,7 @@ Once you have completed this process, paste your API key above and press 'Valida
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="73Z-0t-8zx" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1477" y="1248"/>
+            <point key="canvasLocation" x="1504" y="1140"/>
         </scene>
         <!--History View Controller - Wallets-->
         <scene sceneID="okT-DR-JNM">
@@ -1204,32 +1281,31 @@ Once you have completed this process, paste your API key above and press 'Valida
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="113" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="djQ-Wd-nb2">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="97" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="djQ-Wd-nb2">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="113" id="JGu-XM-zjI">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="113"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="97" id="JGu-XM-zjI">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="97"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JGu-XM-zjI" id="4I4-7C-c5i">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.000000000 DOGE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="wRR-VV-PHv">
-                                                    <rect key="frame" x="16" y="14" width="284" height="27"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <rect key="frame" x="17" y="9" width="284" height="27"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="6" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="To: DGszZCQdH4tLxu4wZ1nerAL5c9WtS1vmHp" translatesAutoresizingMaskIntoConstraints="NO" id="BM3-P1-MoD">
-                                                    <rect key="frame" x="11" y="72" width="307" height="35"/>
+                                                    <rect key="frame" x="13" y="34" width="307" height="27"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sent 00/00/2014 7:25PM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEh-3Z-MRj">
-                                                    <rect key="frame" x="16" y="43" width="284" height="21"/>
+                                                    <rect key="frame" x="18" y="65" width="282" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1252,7 +1328,7 @@ Once you have completed this process, paste your API key above and press 'Valida
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avH-Q6-nz1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1902" y="1204"/>
+            <point key="canvasLocation" x="1886" y="1140"/>
         </scene>
     </scenes>
     <resources>
@@ -1270,6 +1346,6 @@ Once you have completed this process, paste your API key above and press 'Valida
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="1BR-Tb-qde"/>
+        <segue reference="Lpc-wA-whP"/>
     </inferredMetricsTieBreakers>
 </document>

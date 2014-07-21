@@ -80,13 +80,16 @@
     __block BOOL tstatus;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,
                                              (unsigned long)NULL), ^(void) {
-    tstatus = [api makeDogeTransaction:[amountField.text doubleValue] toAddress:addressField.text withPin:pinField.text];
+        tstatus = [api makeDogeTransaction:[self calculateValueToSend:[amountField.text doubleValue]] toAddress:addressField.text withPin:pinField.text];
+        double sendamount = [self calculateDisplayedValue:[amountField.text doubleValue]];
         NSLog(@"tstatus: %d",tstatus);
         if(tstatus == TRUE)
         {
             DogeTransaction * transaction = [[DogeTransaction alloc] init];
             transaction.toAddress = addressField.text;
-            transaction.amount = [[NSNumber alloc] initWithDouble:[self calculatePostFeeValue:[amountField.text doubleValue]]];
+            transaction.amount = [[NSNumber alloc] initWithDouble:sendamount];
+            NSLog(@"send amount %f",sendamount);
+            NSLog(@"transaction amount %f",[transaction.amount doubleValue]);
             transaction.transactionID = [api getTransactionID];
             transactionData = [NSKeyedArchiver archivedDataWithRootObject:transaction];
             dispatch_sync(dispatch_get_main_queue(), ^{
@@ -105,16 +108,52 @@
             }
     });
 }
+-(double)calculateValueToSend:(double)value
+{
+    if([[NSUserDefaults standardUserDefaults] boolForKey:@"addfee"] == TRUE)
+    {
+        return [self calculatePostFeeValue:value];
+    }
+    else
+    {
+        return value;
+    }
+}
+-(double)calculateDisplayedValue:(double)value
+{
+    if([[NSUserDefaults standardUserDefaults] boolForKey:@"addfee"] == TRUE)
+    {
+        return value;
+    }
+    else
+    {
+        return [self calculatePostFeeValue:value];
+        
+    }
+}
 -(double)calculatePostFeeValue:(double)value
 {
-    double fee = 0.005*value;
-    value = value - fee;
-    NSLog(@"value: %f",value);
-    return value;
+    if([[NSUserDefaults standardUserDefaults] boolForKey:@"addfee"] == TRUE)
+    {
+        NSLog(@"adding");
+        NSLog(@"ADDFEE: %d",[[NSUserDefaults standardUserDefaults] boolForKey:@"addfee"]);
+        // amount/0.995
+        value = value/0.995;
+        return value;
+    }
+    else
+    {
+        NSLog(@"not adding");
+        double fee = 0.005*value;
+        value = value - fee;
+        NSLog(@"value: %f",value);
+        return value;
+    }
 }
 -(IBAction)scanAddressQR:(id)sender
 {
     if ([BCScannerViewController scannerAvailable]) {
+        NSLog(@"the crap is available");
 		BCScannerViewController *scanner = [[BCScannerViewController alloc] init];
 		scanner.delegate = self;
 		scanner.codeTypes = @[ BCScannerQRCode ];
@@ -172,7 +211,26 @@
     {
         code = [code stringByReplacingOccurrencesOfString:@"dogecoin:" withString:@""];
     }
-    addressField.text = code;
+    NSLog(@"ehhh: %d",[[code componentsSeparatedByString:@"?"] count]);
+    if([[code componentsSeparatedByString:@"?"] count]-1 == 1)
+    {
+        NSLog(@"there is a ?");
+        NSLog(@"poop");
+        NSString * params = [[code componentsSeparatedByString:@"?"] objectAtIndex:1];
+        NSArray * paramArray = [params componentsSeparatedByString:@"&"];
+        NSLog(@"pa count: ",[paramArray count]);
+        for(int i=0;i<[paramArray count];i++)
+        {
+            if([[paramArray objectAtIndex:i] rangeOfString:@"amount"].location!= NSNotFound)
+            {
+                NSString * amountStr = [paramArray objectAtIndex:i];
+                amountStr = [amountStr stringByReplacingOccurrencesOfString:@"amount=" withString:@""];
+                    amountField.text = amountStr;
+            }
+        }
+    }
+    addressField.text = [code substringToIndex:34];
+    [self editingChanged:nil];
 	NSLog(@"Added: [%@]", codes);
 }
 

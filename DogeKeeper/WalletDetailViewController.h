@@ -18,6 +18,10 @@
     IBOutlet UILabel * recievedLabel;
     IBOutlet UILabel * titleLabel;
     IBOutlet UITextView * addressView;
+    IBOutlet UITextField * amountField;
+    IBOutlet UIScrollView * scrollView;
+    IBOutlet UIView * detailView;
+    IBOutlet UIToolbar * keyboardBar;
 }
 @property NSData * walletData;
 

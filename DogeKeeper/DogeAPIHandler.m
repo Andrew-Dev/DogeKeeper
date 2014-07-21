@@ -46,7 +46,6 @@
 {
     NSURL * dogeApiRequest = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.dogeapi.com/wow/v2/?api_key=%@&a=get_balance",apikey]];
     NSString * response = [self makeUrlRequest:dogeApiRequest];
-    //NSString * response = [NSString stringWithContentsOfURL:dogeApiRequest encoding:NSUTF8StringEncoding error:nil];
     NSMutableDictionary * validationdata;
     if(response != nil)
     {
@@ -76,15 +75,21 @@
     }
     return FALSE;
 }
--(BOOL)addNewAddress
+-(BOOL)addNewAddress:(NSString*)addressName
 {
-    ///wow/v2/?api_key={API_KEY}&a=get_new_address&address_label={ADDRESS_LABEL}
-    NSURL * dogeApiRequest = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.dogeapi.com/wow/v2/?api_key=%@&a=get_balance",[self getApiKey]]];
+    NSURL * dogeApiRequest = [[NSURL alloc] init];
+    if([addressName isEqualToString:@""])
+    {
+        dogeApiRequest = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.dogeapi.com/wow/v2/?api_key=%@&a=get_new_address",[self getApiKey]]];
+    }
+    else
+    {
+        dogeApiRequest = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.dogeapi.com/wow/v2/?api_key=%@&a=get_new_address&address_label=%@",[self getApiKey],addressName]];
+    }
     NSString * response = [self makeUrlRequest:dogeApiRequest];
-    //NSString * response = [NSString stringWithContentsOfURL:dogeApiRequest encoding:NSUTF8StringEncoding error:nil];
     if(response == nil || [response  isEqual: @""])
     {
-        error = @"No data recieved from DogeAPI server.  DogeAPI may be having issues, or you may be experiencing connection problems. Please try again later.";
+        error = @"No data recieved from DogeAPI server. DogeAPI may be having issues, or you may be experiencing connection problems. Please try again later.";
         return FALSE;
     }
     NSMutableDictionary * addressdata = [NSJSONSerialization JSONObjectWithData:[response dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:nil];
@@ -111,7 +116,6 @@
 {
     NSURL * dogeApiRequest = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.dogeapi.com/wow/v2/?api_key=%@&a=get_balance",[self getApiKey]]];
     NSString * response = [self makeUrlRequest:dogeApiRequest];
-    //NSString * response = [NSString stringWithContentsOfURL:dogeApiRequest encoding:NSUTF8StringEncoding error:nil];
     if(response == nil || [response  isEqual: @""])
     {
         error = @"No data recieved from DogeAPI server. DogeAPI may be having issues, or you may be experiencing connection problems. Please try again later.";
@@ -164,7 +168,6 @@
 {
     NSURL * dogeApiRequest = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.dogeapi.com/wow/v2/?a=get_current_price&convert_to=BTC&amount_doge=1"]];//,[doge doubleValue]]];
     NSString * response = [self makeUrlRequest:dogeApiRequest];
-    //NSString * response = [NSString stringWithContentsOfURL:dogeApiRequest encoding:NSUTF8StringEncoding error:nil];
     if(response == nil || [response isEqual:@""])
     {
         error = @"No data recieved from DogeAPI server.  DogeAPI may be having issues, or you may be experiencing connection problems. Please try again later.";
@@ -185,7 +188,6 @@
 {
     NSURL * dogeApiRequest = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.dogeapi.com/wow/v2/?a=get_current_price&convert_to=BTC&amount_doge=1"]];//,[doge doubleValue]]];
     NSString * response = [self makeUrlRequest:dogeApiRequest];
-    //NSString * response = [NSString stringWithContentsOfURL:dogeApiRequest encoding:NSUTF8StringEncoding error:nil];
     if(response == nil || [response isEqual:@""])
     {
         error = @"No data recieved from DogeAPI server. DogeAPI may be having issues, or you may be experiencing connection problems. Please try again later.";
@@ -207,7 +209,6 @@
     NSArray * addresses = [[NSArray alloc] initWithObjects:@"", nil];
     NSURL * dogeApiRequest = [NSURL URLWithString:[NSString stringWithFormat:@"https://dogeapi.com/wow/v2/?api_key=%@&a=get_my_addresses",[self getApiKey]]];
     NSString * response = [self makeUrlRequest:dogeApiRequest];
-    //NSString * response = [NSString stringWithContentsOfURL:dogeApiRequest encoding:NSUTF8StringEncoding error:nil];
     if(response == nil || [response  isEqual: @""])
     {
         error = @"No data recieved from DogeAPI server. DogeAPI may be having issues, or you may be experiencing connection problems. Please try again later.";
@@ -237,8 +238,8 @@
 //Makes transactiona and adds to transaction history list
 -(BOOL)makeDogeTransaction:(double)amount toAddress:(NSString*)address withPin:(NSString*)pin
 {
-    NSURL * dogeApiRequest = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.dogeapi.com/wow/v2/?api_key=%@&a=withdraw&amount_doge=%f&pin=%@&payment_address=%@",[self getApiKey],amount,pin,address]];
-    //NSString * response = [NSString stringWithContentsOfURL:dogeApiRequest encoding:NSASCIIStringEncoding error:nil];
+    NSURL * dogeApiRequest = [NSURL URLWithString:[NSString stringWithFormat:@"https://www.dogeapi.com/wow/v2/?api_key=%@&a=withdraw&amount_doge=%.8f&pin=%@&payment_address=%@",[self getApiKey],amount,pin,address]];
+    NSLog(@"%@",[dogeApiRequest absoluteString]);
     NSString * response = [self makeUrlRequest:dogeApiRequest];
     NSLog(@"resp: %@",response);
     if(response == nil || [response  isEqual: @""])

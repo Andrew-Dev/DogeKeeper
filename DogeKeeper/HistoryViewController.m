@@ -72,7 +72,7 @@
      NSString * value = [numformatter stringFromNumber:transaction.amount];
      valueLabel.text = [NSString stringWithFormat:@"%@ DOGE",value];
      NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-     [formatter setDateFormat:@"mm/dd/yyyy hh:mm a"];
+     [formatter setDateFormat:@"MM/dd/yyyy hh:mm a"];
      dateLabel.text = [formatter stringFromDate:transaction.dateSent];
      addressView.text = [NSString stringWithFormat:@"To: %@",transaction.toAddress];
  

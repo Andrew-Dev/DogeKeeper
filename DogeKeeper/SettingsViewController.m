@@ -30,6 +30,7 @@
 {
     [super viewDidLoad];
     api = [[DogeAPIHandler alloc] init];
+    feeSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"addfee"];
     if([api checkDogeAPIAccount])
     {
         unlinkButton.enabled = TRUE;
@@ -42,6 +43,7 @@
 }
 -(void)viewDidAppear:(BOOL)animated
 {
+    feeSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"addfee"];
     if([api checkDogeAPIAccount])
     {
         unlinkButton.enabled = TRUE;
@@ -50,10 +52,25 @@
     {
         unlinkButton.enabled = FALSE;
     }
+    if([EncryptionHelper passcodeIsSet])
+    {
+        setPassButton.enabled = FALSE;
+        removePassButton.enabled = TRUE;
+    }
+    else
+    {
+        setPassButton.enabled = TRUE;
+        removePassButton.enabled = FALSE;
+    }
 }
 -(IBAction)about:(id)sender
 {
     [self performSegueWithIdentifier:@"aboutSegue" sender:nil];
+}
+- (IBAction)toggleFee:(id)sender
+{
+    [[NSUserDefaults standardUserDefaults] setBool:feeSwitch.on forKey:@"addfee"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
 }
 -(IBAction)removeApi:(id)sender
 {
@@ -65,6 +82,14 @@
         [alert show];
         unlinkButton.enabled = FALSE;
     }
+}
+-(IBAction)setPasswordBtn:(id)sender
+{
+    [EncryptionHelper presentPasswordViewFromViewController:self withAction:@"set"];
+}
+-(IBAction)removePasswordBtn:(id)sender
+{
+    [EncryptionHelper presentPasswordViewFromViewController:self withAction:@"remove"];
 }
 - (void)didReceiveMemoryWarning
 {
