@@ -211,11 +211,8 @@
     {
         code = [code stringByReplacingOccurrencesOfString:@"dogecoin:" withString:@""];
     }
-    NSLog(@"ehhh: %d",[[code componentsSeparatedByString:@"?"] count]);
     if([[code componentsSeparatedByString:@"?"] count]-1 == 1)
     {
-        NSLog(@"there is a ?");
-        NSLog(@"poop");
         NSString * params = [[code componentsSeparatedByString:@"?"] objectAtIndex:1];
         NSArray * paramArray = [params componentsSeparatedByString:@"&"];
         NSLog(@"pa count: ",[paramArray count]);
