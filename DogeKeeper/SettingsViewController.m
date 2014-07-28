@@ -52,16 +52,6 @@
     {
         unlinkButton.enabled = FALSE;
     }
-    if([EncryptionHelper passcodeIsSet])
-    {
-        setPassButton.enabled = FALSE;
-        removePassButton.enabled = TRUE;
-    }
-    else
-    {
-        setPassButton.enabled = TRUE;
-        removePassButton.enabled = FALSE;
-    }
 }
 -(IBAction)about:(id)sender
 {
@@ -82,14 +72,6 @@
         [alert show];
         unlinkButton.enabled = FALSE;
     }
-}
--(IBAction)setPasswordBtn:(id)sender
-{
-    [EncryptionHelper presentPasswordViewFromViewController:self withAction:@"set"];
-}
--(IBAction)removePasswordBtn:(id)sender
-{
-    [EncryptionHelper presentPasswordViewFromViewController:self withAction:@"remove"];
 }
 - (void)didReceiveMemoryWarning
 {
