@@ -18,4 +18,6 @@
 -(NSString*)getTotalMined;
 -(NSString*)getDifficulty;
 -(NSString*)getError;
+-(NSNumber*)getTotalBalance:(NSArray*)addresses;
+
 @end

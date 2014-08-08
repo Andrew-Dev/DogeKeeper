@@ -58,7 +58,7 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="15" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.000000000 DOGE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATe-mS-c0B">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="15" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ɖ 5000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATe-mS-c0B">
                                                     <rect key="frame" x="20" y="64" width="280" height="21"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -106,11 +106,11 @@
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="tintColor" red="1" green="0.71182316599999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="QUy-BD-bpt" kind="relationship" relationship="viewControllers" id="M8t-EP-wfW"/>
                         <segue destination="LcU-jh-a4m" kind="relationship" relationship="viewControllers" id="Vw0-cY-Bcu"/>
+                        <segue destination="DHk-my-eQn" kind="relationship" relationship="viewControllers" id="cId-cW-xCc"/>
                         <segue destination="hNG-6B-nNJ" kind="relationship" relationship="viewControllers" id="mKH-gR-yVy"/>
                     </connections>
                 </tabBarController>
@@ -130,20 +130,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YCR-Fk-Cde">
+                            <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" minimumZoomScale="0.0" maximumZoomScale="0.0" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YCR-Fk-Cde">
                                 <rect key="frame" x="20" y="76" width="280" height="304"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="304" id="TBJ-DC-Kts"/>
-                                    <constraint firstAttribute="width" constant="280" id="npj-KT-W64"/>
-                                </constraints>
-                                <string key="text">Welcome to DogeKeeper, a mobile app that lets you manage your Dogecoin. Dogecoin is a digital, peer-to-peer cryptocurrency. This app will let you view your Dogecoin wallets, and make transactions using your DogeAPI account.
+                                <string key="text">Welcome to DogeKeeper, a mobile app that lets you manage your Dogecoin. Dogecoin is a digital, peer-to-peer cryptocurrency. This app will let you view your Dogecoin wallets, view exchange rates, and make transactions using your Block.io account.
 
-By using this app, you agree that any damages, problems or losses of any kind are not the app developer's reponsibility, DogeAPI's responsibilty or Apple's responsibility. It is not recommended to keep high amounts of Dogecoin in your DogeAPI account.</string>
+By using this app, you agree that any damages, problems or losses of any kind are not the app developer's reponsibility, Block.io's Responsibility, or Apple's responsibility. It is not recommended to keep high amounts of Dogecoin in an online wallet.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1d-Rt-8ph">
-                                <rect key="frame" x="40" y="382" width="240" height="61"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1d-Rt-8ph">
+                                <rect key="frame" x="40" y="388" width="240" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Agree and Get Started">
                                     <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -157,7 +153,7 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
                                 <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2a-rD-XHa">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2a-rD-XHa">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <color key="tintColor" red="1" green="0.71182316599999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -167,11 +163,6 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="e2a-rD-XHa" firstAttribute="top" secondItem="31g-XG-ux0" secondAttribute="bottom" id="j7l-WY-Rc7"/>
-                            <constraint firstItem="YCR-Fk-Cde" firstAttribute="top" secondItem="e2a-rD-XHa" secondAttribute="bottom" constant="12" id="kxE-LT-Vhj"/>
-                            <constraint firstItem="C1d-Rt-8ph" firstAttribute="top" secondItem="YCR-Fk-Cde" secondAttribute="bottom" constant="2" id="wVN-dS-ACn"/>
-                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
@@ -179,7 +170,7 @@ By using this app, you agree that any damages, problems or losses of any kind ar
             </objects>
             <point key="canvasLocation" x="-318" y="224"/>
         </scene>
-        <!--Doge View Controller - Send/Recieve-->
+        <!--Doge View Controller - Send/Receive-->
         <scene sceneID="cGa-Vy-iX1">
             <objects>
                 <viewController id="LcU-jh-a4m" customClass="DogeViewController" sceneMemberID="viewController">
@@ -188,19 +179,22 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                         <viewControllerLayoutGuide type="bottom" id="v2y-G0-ZyM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JLi-by-LG4">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vZn-j9-D3t">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vZn-j9-D3t">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
                                 <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="7HL-rB-TYV"/>
+                                </constraints>
                             </view>
                             <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eqC-Sz-PyB">
-                                <rect key="frame" x="0.0" y="18" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <color key="tintColor" red="1" green="0.71182316599999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <navigationItem title="Send/Recieve" id="jhj-J8-CaA">
+                                    <navigationItem title="Send/Receive" id="jhj-J8-CaA">
                                         <barButtonItem key="leftBarButtonItem" enabled="NO" title="History" id="ffg-QO-Ssj">
                                             <connections>
                                                 <action selector="history:" destination="LcU-jh-a4m" id="yhZ-oa-7e3"/>
@@ -214,13 +208,13 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00000000.0000 DOGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.35000000000000003" translatesAutoresizingMaskIntoConstraints="NO" id="I8O-1I-luY">
-                                <rect key="frame" x="19" y="73" width="282" height="61"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Ɖ0.00000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.35000000000000003" translatesAutoresizingMaskIntoConstraints="NO" id="I8O-1I-luY">
+                                <rect key="frame" x="19" y="73" width="282" height="54"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="46" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ebm-VV-h5u">
-                                <rect key="frame" x="0.0" y="176" width="320" height="343"/>
+                                <rect key="frame" x="0.0" y="171" width="320" height="260"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="46" id="qq8-ZC-dSc">
@@ -244,10 +238,10 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                                     <outlet property="delegate" destination="LcU-jh-a4m" id="6O9-he-zOY"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1j-15-O8Q">
-                                <rect key="frame" x="19" y="134" width="140" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N1j-15-O8Q">
+                                <rect key="frame" x="27" y="128" width="140" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Refresh Data">
+                                <state key="normal" title="Reload Balance">
                                     <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -256,7 +250,7 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4q-pB-Sma">
-                                <rect key="frame" x="161" y="134" width="140" height="34"/>
+                                <rect key="frame" x="175" y="128" width="119" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="New Address">
                                     <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -266,17 +260,17 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                                     <action selector="addAddressButton:" destination="LcU-jh-a4m" eventType="touchUpInside" id="LbK-E6-B0g"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SEm-cv-g23">
-                                <rect key="frame" x="0.0" y="62" width="320" height="457"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SEm-cv-g23">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DogeAPI Setup Required" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3f-Lx-bu6">
-                                        <rect key="frame" x="18" y="30" width="285" height="63"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="25"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Block.io Setup Required" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s3f-Lx-bu6">
+                                        <rect key="frame" x="3" y="29" width="314" height="63"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please setup DogeAPI in the settings tab to use this feature." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="271" translatesAutoresizingMaskIntoConstraints="NO" id="j7p-ii-njG">
-                                        <rect key="frame" x="25" y="101" width="271" height="41"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please setup a Block.io online wallet in the settings tab to use this feature." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="292" translatesAutoresizingMaskIntoConstraints="NO" id="j7p-ii-njG">
+                                        <rect key="frame" x="14" y="100" width="292" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -286,17 +280,18 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="SEm-cv-g23" firstAttribute="leading" secondItem="JLi-by-LG4" secondAttribute="leading" id="29r-WX-gRq"/>
-                            <constraint firstItem="v2y-G0-ZyM" firstAttribute="top" secondItem="Ebm-VV-h5u" secondAttribute="bottom" id="4MI-TX-0ZA"/>
-                            <constraint firstAttribute="trailing" secondItem="SEm-cv-g23" secondAttribute="trailing" id="Ffp-YF-N2a"/>
-                            <constraint firstItem="v2y-G0-ZyM" firstAttribute="top" secondItem="SEm-cv-g23" secondAttribute="bottom" id="H4x-uz-l3S"/>
-                            <constraint firstItem="SEm-cv-g23" firstAttribute="top" secondItem="eqC-Sz-PyB" secondAttribute="bottom" id="ZTh-BT-Y5W"/>
-                            <constraint firstAttribute="trailing" secondItem="Ebm-VV-h5u" secondAttribute="trailing" id="dJJ-v3-0Em"/>
-                            <constraint firstItem="Ebm-VV-h5u" firstAttribute="top" secondItem="l4q-pB-Sma" secondAttribute="bottom" constant="8" id="dRG-se-A1L"/>
-                            <constraint firstItem="Ebm-VV-h5u" firstAttribute="leading" secondItem="JLi-by-LG4" secondAttribute="leading" id="p8u-s2-7R9"/>
+                            <constraint firstItem="I8O-1I-luY" firstAttribute="top" secondItem="eqC-Sz-PyB" secondAttribute="bottom" constant="9" id="9qq-Ri-wQl"/>
+                            <constraint firstItem="N1j-15-O8Q" firstAttribute="top" secondItem="I8O-1I-luY" secondAttribute="bottom" constant="1" id="AiO-ff-yAc"/>
+                            <constraint firstAttribute="trailing" secondItem="I8O-1I-luY" secondAttribute="trailing" constant="19" id="EeC-lI-dQi"/>
+                            <constraint firstItem="I8O-1I-luY" firstAttribute="leading" secondItem="JLi-by-LG4" secondAttribute="leading" constant="19" id="fex-a3-SpA"/>
+                            <constraint firstItem="v2y-G0-ZyM" firstAttribute="top" secondItem="Ebm-VV-h5u" secondAttribute="bottom" id="iJc-Xa-0Aa"/>
+                            <constraint firstItem="Ebm-VV-h5u" firstAttribute="top" secondItem="l4q-pB-Sma" secondAttribute="bottom" constant="9" id="p9a-2t-Vgg"/>
+                            <constraint firstItem="N1j-15-O8Q" firstAttribute="top" secondItem="eqC-Sz-PyB" secondAttribute="bottom" constant="64" id="pQ4-db-OkB"/>
+                            <constraint firstItem="l4q-pB-Sma" firstAttribute="top" secondItem="I8O-1I-luY" secondAttribute="bottom" constant="1" id="qLp-1w-8NY"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Send/Recieve" image="Coins" id="aNZ-nU-guD"/>
+                    <tabBarItem key="tabBarItem" title="Send/Receive" image="Coins" id="aNZ-nU-guD"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="addressButton" destination="l4q-pB-Sma" id="8KL-FR-BEn"/>
                         <outlet property="addressTable" destination="Ebm-VV-h5u" id="OZV-Fh-c2X"/>
@@ -339,7 +334,7 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                                 <color key="tintColor" red="1" green="0.71182316599999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <navigationItem title="Send Doge" id="oxz-sz-o3J">
+                                    <navigationItem title="Send Dogecoin" id="oxz-sz-o3J">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="byP-Bg-lRf">
                                             <connections>
                                                 <action selector="cancel" destination="8Oh-NV-drx" id="mYc-sC-RfL"/>
@@ -363,6 +358,7 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Transactions" image="second" id="gfX-QQ-MCr"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="addressField" destination="Khp-Uv-FyG" id="Ana-Hl-dYG"/>
                         <outlet property="amountField" destination="WKa-ya-AXw" id="65M-3R-wuV"/>
@@ -389,24 +385,24 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                             <color key="backgroundColor" red="0.7875844595" green="0.7875844595" blue="0.7875844595" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00000000" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="WKa-ya-AXw">
-                            <rect key="frame" x="128" y="33" width="182" height="58"/>
+                            <rect key="frame" x="128" y="31" width="182" height="58"/>
                             <fontDescription key="fontDescription" type="system" pointSize="42"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad"/>
                             <connections>
                                 <action selector="editingChanged:" destination="8Oh-NV-drx" eventType="editingChanged" id="SZR-np-5gl"/>
                             </connections>
                         </textField>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Amount DOGE:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2Q-mo-16V">
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Amount Ɖ:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2Q-mo-16V">
                             <rect key="frame" x="128" y="12" width="106" height="21"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.000 After 0.5% DogeAPI fee." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="182" translatesAutoresizingMaskIntoConstraints="NO" id="yY2-tM-kq5">
-                            <rect key="frame" x="128" y="88" width="182" height="35"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.000 After 1Ɖ estimated network fee." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="182" translatesAutoresizingMaskIntoConstraints="NO" id="yY2-tM-kq5">
+                            <rect key="frame" x="128" y="83" width="182" height="35"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="DogeAPI PIN" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F4a-gx-ezx">
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Block.io Secret PIN" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F4a-gx-ezx">
                             <rect key="frame" x="10" y="209" width="300" height="30"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -458,7 +454,7 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                     <color key="barTintColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                 </toolbar>
             </objects>
-            <point key="canvasLocation" x="1075" y="1096"/>
+            <point key="canvasLocation" x="1075" y="1116"/>
         </scene>
         <!--Wallet Detail View Controller - Transactions-->
         <scene sceneID="BVd-Dl-L8K">
@@ -469,19 +465,22 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                         <viewControllerLayoutGuide type="bottom" id="Btk-c4-iBk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ubo-v2-ucE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nOB-WX-Foe">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
                                 <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PIN-b2-Ge4">
+                                <rect key="frame" x="0.0" y="61" width="320" height="419"/>
+                            </scrollView>
                             <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="onJ-QF-9pd">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="17" width="320" height="44"/>
                                 <color key="tintColor" red="1" green="0.71182316599999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <navigationItem title="Wallet QR &amp; Details" id="3p1-0e-1pJ">
+                                    <navigationItem title="Wallet Info" id="3p1-0e-1pJ">
                                         <barButtonItem key="rightBarButtonItem" title="Done" id="0xk-MF-REQ">
                                             <connections>
                                                 <action selector="done:" destination="6CW-o5-Obt" id="KPR-9X-jbd"/>
@@ -490,82 +489,98 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PIN-b2-Ge4">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Btk-c4-iBk" firstAttribute="top" secondItem="PIN-b2-Ge4" secondAttribute="bottom" id="2GV-8w-B5i"/>
-                            <constraint firstItem="PIN-b2-Ge4" firstAttribute="top" secondItem="onJ-QF-9pd" secondAttribute="bottom" id="Ndn-bR-RTl"/>
-                            <constraint firstItem="PIN-b2-Ge4" firstAttribute="leading" secondItem="Ubo-v2-ucE" secondAttribute="leading" id="hty-Ej-Zbs"/>
-                            <constraint firstAttribute="trailing" secondItem="PIN-b2-Ge4" secondAttribute="trailing" id="vfN-6C-G3m"/>
+                            <constraint firstItem="PIN-b2-Ge4" firstAttribute="top" secondItem="onJ-QF-9pd" secondAttribute="bottom" id="Kgq-Hj-YcU"/>
+                            <constraint firstItem="PIN-b2-Ge4" firstAttribute="leading" secondItem="Ubo-v2-ucE" secondAttribute="leading" id="c5j-pN-mSb"/>
+                            <constraint firstAttribute="trailing" secondItem="PIN-b2-Ge4" secondAttribute="trailing" id="eta-sp-q1a"/>
+                            <constraint firstItem="Btk-c4-iBk" firstAttribute="top" secondItem="PIN-b2-Ge4" secondAttribute="bottom" id="pTB-3k-Kxs"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Transactions" image="second" id="LkP-xS-qds"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="addressView" destination="UlT-Jf-1Ib" id="hgg-Ws-dlT"/>
-                        <outlet property="amountField" destination="R3Z-Je-ZnF" id="YtR-5q-AMs"/>
-                        <outlet property="balanceLabel" destination="uDo-dK-bAe" id="KAO-rl-lop"/>
-                        <outlet property="detailView" destination="YSD-oL-YGM" id="nix-iO-GxF"/>
+                        <outlet property="addressBtn" destination="o2g-6R-euO" id="ILU-4E-hKI"/>
+                        <outlet property="amountField" destination="Ahw-a4-yVF" id="QfL-lE-6df"/>
+                        <outlet property="balanceLabel" destination="Mle-md-Vwi" id="pEI-Dd-xlN"/>
+                        <outlet property="copiedLabel" destination="IxV-od-aML" id="zst-p8-Sk6"/>
+                        <outlet property="detailView" destination="8ws-bd-RIo" id="MFd-KY-GBk"/>
+                        <outlet property="dogechainButton" destination="Yfr-Wc-XAV" id="uot-BP-pMY"/>
                         <outlet property="keyboardBar" destination="QNv-gO-mjc" id="oGm-nZ-cOv"/>
-                        <outlet property="qrView" destination="mzC-DT-haJ" id="8Iw-RS-oBo"/>
-                        <outlet property="recievedLabel" destination="NYf-1J-hws" id="YV9-xP-86h"/>
+                        <outlet property="qrView" destination="8R8-ak-WBZ" id="bpM-2F-5nV"/>
                         <outlet property="scrollView" destination="PIN-b2-Ge4" id="lC2-UM-Tpw"/>
-                        <outlet property="titleLabel" destination="hmi-5e-cqJ" id="ZZM-Rs-R1K"/>
+                        <outlet property="titleLabel" destination="wc2-iG-E8v" id="Bxn-hx-atH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nUC-qY-GlS" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="YSD-oL-YGM" userLabel="Detail View">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                <view contentMode="scaleToFill" id="8ws-bd-RIo" userLabel="Detail View">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="419"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mzC-DT-haJ">
-                            <rect key="frame" x="50" y="61" width="220" height="220"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8R8-ak-WBZ">
+                            <rect key="frame" x="55" y="53" width="210" height="210"/>
                         </imageView>
-                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="address" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UlT-Jf-1Ib">
-                            <rect key="frame" x="7" y="288" width="307" height="28"/>
-                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                        </textView>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Balance:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="uDo-dK-bAe">
-                            <rect key="frame" x="24" y="359" width="280" height="21"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Balance:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="Mle-md-Vwi">
+                            <rect key="frame" x="20" y="345" width="280" height="21"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Recieved:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="NYf-1J-hws">
-                            <rect key="frame" x="24" y="384" width="280" height="21"/>
+                        <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address copied." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="IxV-od-aML">
+                            <rect key="frame" x="20" y="326" width="280" height="21"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Request" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="4W8-4I-ZBm">
+                            <rect key="frame" x="55" y="274" width="62" height="21"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Request" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="uDr-8s-rUF">
-                            <rect key="frame" x="50" y="325" width="62" height="21"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DOGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="eRi-i0-a66">
+                            <rect key="frame" x="217" y="274" width="47" height="21"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DOGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="fmB-cW-5qh">
-                            <rect key="frame" x="217" y="325" width="47" height="21"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wallet Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmi-5e-cqJ">
-                            <rect key="frame" x="22" y="12" width="276" height="41"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wallet Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wc2-iG-E8v">
+                            <rect key="frame" x="22" y="11" width="276" height="41"/>
                             <fontDescription key="fontDescription" type="system" pointSize="24"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00000000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R3Z-Je-ZnF">
-                            <rect key="frame" x="120" y="321" width="89" height="30"/>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="0.00000000" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ahw-a4-yVF">
+                            <rect key="frame" x="120" y="270" width="89" height="30"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad"/>
                             <connections>
-                                <action selector="amountFieldChanged:" destination="6CW-o5-Obt" eventType="editingChanged" id="Ar6-fj-71h"/>
+                                <action selector="amountFieldChanged:" destination="6CW-o5-Obt" eventType="editingChanged" id="S5h-4K-sOu"/>
                             </connections>
                         </textField>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kSw-IM-fxs">
-                            <rect key="frame" x="120" y="350" width="89" height="1"/>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sPu-9Y-HNU">
+                            <rect key="frame" x="120" y="299" width="89" height="1"/>
                             <color key="backgroundColor" red="0.7875844595" green="0.7875844595" blue="0.7875844595" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o2g-6R-euO">
+                            <rect key="frame" x="11" y="308" width="298" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="address">
+                                <color key="titleColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="copyAddress:" destination="6CW-o5-Obt" eventType="touchUpInside" id="OOB-EP-WyD"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfr-Wc-XAV">
+                            <rect key="frame" x="70" y="374" width="181" height="33"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="View on Dogechain.info">
+                                <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="viewOnDogeChain:" destination="6CW-o5-Obt" eventType="touchUpInside" id="e4t-10-17p"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                 </view>
@@ -584,7 +599,7 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                     <color key="barTintColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                 </toolbar>
             </objects>
-            <point key="canvasLocation" x="1075" y="418"/>
+            <point key="canvasLocation" x="1075" y="522"/>
         </scene>
         <!--Settings View Controller - Settings-->
         <scene sceneID="8Df-bt-aPU">
@@ -603,11 +618,16 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                                 <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sr3-5p-CXh">
-                                <rect key="frame" x="0.0" y="18" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <color key="tintColor" red="1" green="0.71182316599999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Settings" id="FTd-kz-5cD">
+                                        <barButtonItem key="leftBarButtonItem" image="Megaphone" id="ndO-9T-4xd">
+                                            <connections>
+                                                <action selector="announcements:" destination="hNG-6B-nNJ" id="i98-DT-9Lb"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="AT2-S9-lXX">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" id="sWW-Xn-WGI">
                                                 <rect key="frame" x="282" y="11" width="22" height="22"/>
@@ -624,226 +644,54 @@ By using this app, you agree that any damages, problems or losses of any kind ar
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DogeAPI Setup:" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="d37-4w-2gD">
-                                <rect key="frame" x="20" y="77" width="280" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Online Wallet:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="0so-9i-3Iw">
+                                <rect key="frame" x="20" y="80" width="280" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Auto increase post-fee value to send desired amount." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="220" translatesAutoresizingMaskIntoConstraints="NO" id="VDc-5b-KAe">
-                                <rect key="frame" x="79" y="214" width="220" height="47"/>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="There are currently highly important announcement(s) regarding DogeKeeper. Tap the megaphone above to view them." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="291" translatesAutoresizingMaskIntoConstraints="NO" id="JPc-Vp-WJN">
+                                <rect key="frame" x="15" y="217" width="291" height="80"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fY-fL-lbK">
-                                <rect key="frame" x="40" y="106" width="240" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBT-xw-Vm9">
+                                <rect key="frame" x="40" y="109" width="240" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Set DogeAPI Key">
+                                <state key="normal" title="Block.io Setup">
                                     <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="setApi:" destination="hNG-6B-nNJ" eventType="touchUpInside" id="zX3-St-6rQ"/>
+                                    <action selector="setBlockIO:" destination="hNG-6B-nNJ" eventType="touchUpInside" id="Nfq-Wx-gtI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sdl-fy-T7E">
-                                <rect key="frame" x="40" y="160" width="240" height="46"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7V-JF-iXt">
+                                <rect key="frame" x="40" y="163" width="240" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Unlink DogeAPI Key">
+                                <state key="normal" title="Unlink Block.io Account">
                                     <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="removeApi:" destination="hNG-6B-nNJ" eventType="touchUpInside" id="lBy-be-BnI"/>
+                                    <action selector="removeAccount:" destination="hNG-6B-nNJ" eventType="touchUpInside" id="CnR-ep-7zi"/>
                                 </connections>
                             </button>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Xf-9C-anc">
-                                <rect key="frame" x="22" y="222" width="51" height="31"/>
-                                <connections>
-                                    <action selector="toggleFee:" destination="hNG-6B-nNJ" eventType="valueChanged" id="Wh0-Wi-kvL"/>
-                                </connections>
-                            </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="Settings" id="9R0-lm-g4I"/>
                     <connections>
-                        <outlet property="feeSwitch" destination="2Xf-9C-anc" id="y7k-oG-ywY"/>
-                        <outlet property="unlinkButton" destination="Sdl-fy-T7E" id="eH2-4R-uVY"/>
-                        <segue destination="e41-Tz-RID" kind="modal" identifier="apiSegue" id="mgY-Db-HMT"/>
+                        <outlet property="announcementLabel" destination="JPc-Vp-WJN" id="vMN-fh-lEL"/>
+                        <outlet property="unlinkButton" destination="t7V-JF-iXt" id="jK3-Ou-jfG"/>
                         <segue destination="jJd-NA-HV9" kind="modal" identifier="aboutSegue" id="nQb-Nh-FDl"/>
+                        <segue destination="JAa-aU-sdh" kind="modal" identifier="blockSegue" id="uzm-LM-gnw"/>
+                        <segue destination="aiN-ob-hx6" kind="modal" identifier="announcementSegue" id="whA-16-hAg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j1k-cr-S92" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="1914"/>
-        </scene>
-        <!--Api Key View Controller - Settings-->
-        <scene sceneID="jRx-Zk-9of">
-            <objects>
-                <viewController id="e41-Tz-RID" customClass="ApiKeyViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="e6E-dE-VKk"/>
-                        <viewControllerLayoutGuide type="bottom" id="6UO-lm-Nek"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="JFe-jT-rQi">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eId-eb-YQs">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
-                                <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceD-Wo-ves">
-                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
-                                <color key="tintColor" red="1" green="0.71182316599999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="barTintColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <items>
-                                    <navigationItem title="Set DogeAPI Key" id="kKP-jT-YCv">
-                                        <barButtonItem key="rightBarButtonItem" title="Close" id="hca-z9-ghO">
-                                            <connections>
-                                                <action selector="close:" destination="e41-Tz-RID" id="Rcw-ll-cMG"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter or paste a new DogeAPI Key" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KTd-9O-odE">
-                                <rect key="frame" x="10" y="117" width="300" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1y0-f1-L3n">
-                                <rect key="frame" x="10" y="146" width="300" height="1"/>
-                                <color key="backgroundColor" red="0.7875844595" green="0.7875844595" blue="0.7875844595" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DogeAPI Key Not Set" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ono-zL-hdI">
-                                <rect key="frame" x="51" y="81" width="219" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V6N-zt-c5X">
-                                <rect key="frame" x="40" y="155" width="240" height="37"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Validate Key and Save">
-                                    <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="agree:" destination="Ope-4f-gzM" eventType="touchUpInside" id="Bij-Tp-Y1q"/>
-                                    <action selector="validateKey:" destination="e41-Tz-RID" eventType="touchUpInside" id="ace-8s-GPY"/>
-                                </connections>
-                            </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UQ9-De-eY7">
-                                <rect key="frame" x="0.0" y="200" width="320" height="368"/>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="UQ9-De-eY7" firstAttribute="top" secondItem="V6N-zt-c5X" secondAttribute="bottom" constant="8" id="0QM-QR-Ama"/>
-                            <constraint firstItem="UQ9-De-eY7" firstAttribute="leading" secondItem="JFe-jT-rQi" secondAttribute="leading" id="1ZE-K7-nuX"/>
-                            <constraint firstAttribute="trailing" secondItem="UQ9-De-eY7" secondAttribute="trailing" id="FlI-XI-jZa"/>
-                            <constraint firstItem="6UO-lm-Nek" firstAttribute="top" secondItem="UQ9-De-eY7" secondAttribute="bottom" id="ab3-fw-EhG"/>
-                            <constraint firstItem="6UO-lm-Nek" firstAttribute="top" secondItem="UQ9-De-eY7" secondAttribute="bottom" id="tHA-fY-zp1"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="second" id="Ygd-uO-OdH"/>
-                    <connections>
-                        <outlet property="doneButton" destination="hca-z9-ghO" id="Yca-ui-En2"/>
-                        <outlet property="instructionScroll" destination="UQ9-De-eY7" id="mHj-FX-wAh"/>
-                        <outlet property="instructionView" destination="QvL-6e-AdE" id="FDF-e4-ru0"/>
-                        <outlet property="keyField" destination="KTd-9O-odE" id="rQn-Wz-XUv"/>
-                        <outlet property="keyboardBar" destination="ik2-l0-9Mw" id="3vL-8I-hby"/>
-                        <outlet property="validLabel" destination="Ono-zL-hdI" id="Tht-at-sFe"/>
-                        <outlet property="validateButton" destination="V6N-zt-c5X" id="hec-Mp-Kio"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jkG-Uv-QlP" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="QvL-6e-AdE" userLabel="Instruction View">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bZ0-ra-JPD">
-                            <rect key="frame" x="40" y="448" width="240" height="37"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                            <state key="normal" title="Register DogeAPI Account">
-                                <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="agree:" destination="Ope-4f-gzM" eventType="touchUpInside" id="wJF-u4-BP0"/>
-                                <action selector="dogeApiRegister:" destination="e41-Tz-RID" eventType="touchUpInside" id="HMC-G0-RLO"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTd-iI-OHU">
-                            <rect key="frame" x="40" y="493" width="240" height="37"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                            <state key="normal" title="DogeAPI Settings">
-                                <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="agree:" destination="Ope-4f-gzM" eventType="touchUpInside" id="prk-wE-EbW"/>
-                                <action selector="dogeApiSettings:" destination="e41-Tz-RID" eventType="touchUpInside" id="VDT-nk-VMi"/>
-                            </connections>
-                        </button>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DogeAPI Setup Instructions:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAZ-gM-Tkv">
-                            <rect key="frame" x="30" y="0.0" width="261" height="45"/>
-                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10000" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="295" translatesAutoresizingMaskIntoConstraints="NO" id="w2W-vx-FRX">
-                            <rect key="frame" x="13" y="53" width="295" height="387"/>
-                            <attributedString key="attributedText">
-                                <fragment>
-                                    <string key="content">To send DOGE using DogeKeeper, you must
-create an account on http://dogeapi.com. DogeAPI is an online wallet used by many, and is in no way affiliated with DogeKeeper or Apple.
-
-Once you have created your account and verified your e-mail address, you can get your API Key on the DogeAPI settings page, located within the My Account menu. Once you have received your API key from the settings, enter or paste it into the field above to begin using it with DogeKeeper. After, </string>
-                                    <attributes>
-                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <font key="NSFont" size="14" name="Helvetica-Light"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                    </attributes>
-                                </fragment>
-                                <fragment content="you must enable API access in your DogeAPI settings. ">
-                                    <attributes>
-                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <font key="NSFont" size="14" name="Helvetica-Bold"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                    </attributes>
-                                </fragment>
-                                <fragment>
-                                    <string key="content">This can be done by selecting 'Enable v2 API' under 'Wallet Settings', and saving your settings (after entering your PIN). 
-Once you have completed this process, paste your API key above and press 'Validate Key and Save' to assure everything is working properly. Once this has been accomplished, you will be able to make Doge transactions with your iOS device.</string>
-                                    <attributes>
-                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <font key="NSFont" size="14" name="Helvetica-Light"/>
-                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
-                                    </attributes>
-                                </fragment>
-                            </attributedString>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                </view>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" id="ik2-l0-9Mw">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <items>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="iMC-Yf-Ucf"/>
-                        <barButtonItem title="Done" id="31G-tJ-ZD9">
-                            <connections>
-                                <action selector="keyboardDone:" destination="e41-Tz-RID" id="IJZ-g2-96R"/>
-                            </connections>
-                        </barButtonItem>
-                    </items>
-                    <color key="tintColor" red="1" green="0.71182316599999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <color key="barTintColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                </toolbar>
-            </objects>
-            <point key="canvasLocation" x="1087" y="1914"/>
+            <point key="canvasLocation" x="653" y="2522"/>
         </scene>
         <!--About View Controller - Settings-->
         <scene sceneID="d55-XT-l1R">
@@ -889,7 +737,7 @@ Once you have completed this process, paste your API key above and press 'Valida
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version 1.1.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68H-iy-phg">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Version 2.0.0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68H-iy-phg">
                                         <rect key="frame" x="128" y="135" width="172" height="40"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -919,19 +767,6 @@ Once you have completed this process, paste your API key above and press 'Valida
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MyM-Xj-0eS">
-                                <rect key="frame" x="56" y="360" width="100" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="DogeAPI">
-                                    <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="agree:" destination="Ope-4f-gzM" eventType="touchUpInside" id="SMD-ks-CCH"/>
-                                    <action selector="dogeAPI:" destination="jJd-NA-HV9" eventType="touchUpInside" id="Me7-pF-VC5"/>
-                                    <action selector="setApi:" destination="hNG-6B-nNJ" eventType="touchUpInside" id="ZSU-DN-DnP"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93U-X3-eE8">
                                 <rect key="frame" x="56" y="222" width="100" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -984,8 +819,12 @@ Once you have completed this process, paste your API key above and press 'Valida
                                     <action selector="setApi:" destination="hNG-6B-nNJ" eventType="touchUpInside" id="3lO-Yp-eT0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAs-ZZ-ZNO">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAs-ZZ-ZNO">
                                 <rect key="frame" x="218" y="291" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="h28-nB-aiX"/>
+                                    <constraint firstAttribute="height" constant="40" id="sSh-97-2QO"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="On GitHub">
                                     <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -995,8 +834,12 @@ Once you have completed this process, paste your API key above and press 'Valida
                                     <action selector="dogeKeeperGitHub:" destination="jJd-NA-HV9" eventType="touchUpInside" id="qVU-EY-Miu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Elw-Up-f6x">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Elw-Up-f6x">
                                 <rect key="frame" x="5" y="408" width="117" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="k29-h0-5wb"/>
+                                    <constraint firstAttribute="width" constant="117" id="lFc-uk-LjX"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="BCScanner">
                                     <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1035,7 +878,7 @@ Once you have completed this process, paste your API key above and press 'Valida
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBU-p3-xB4">
-                                <rect key="frame" x="164" y="360" width="100" height="40"/>
+                                <rect key="frame" x="193" y="360" width="100" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="DogeChain">
                                     <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1045,16 +888,29 @@ Once you have completed this process, paste your API key above and press 'Valida
                                     <action selector="dogeChain:" destination="jJd-NA-HV9" eventType="touchUpInside" id="csE-wa-14x"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0F-Xo-Fla">
+                                <rect key="frame" x="27" y="360" width="158" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="RlQ-py-rY9"/>
+                                    <constraint firstAttribute="width" constant="158" id="sf2-ax-k7o"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Block.io/SoChain">
+                                    <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SoChain:" destination="jJd-NA-HV9" eventType="touchUpInside" id="jNQ-O4-nrr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MyM-Xj-0eS" firstAttribute="top" secondItem="5WK-T5-rPh" secondAttribute="bottom" constant="2" id="22X-64-lvk"/>
                             <constraint firstItem="Rg8-7O-Ki3" firstAttribute="top" secondItem="62w-o7-ex7" secondAttribute="bottom" constant="2" id="9KX-AK-DoQ"/>
                             <constraint firstItem="Mfk-qE-Vwy" firstAttribute="top" secondItem="ymN-7p-To8" secondAttribute="bottom" constant="10" id="Bst-y0-nhm"/>
                             <constraint firstItem="yUH-pk-t7D" firstAttribute="top" secondItem="KBU-p3-xB4" secondAttribute="bottom" constant="8" id="Ffo-Og-C5q"/>
                             <constraint firstItem="l2r-cH-jlt" firstAttribute="top" secondItem="KBU-p3-xB4" secondAttribute="bottom" constant="8" id="Gmx-3F-PmW"/>
                             <constraint firstItem="t6P-g3-JZh" firstAttribute="top" secondItem="62w-o7-ex7" secondAttribute="bottom" constant="2" id="KQ3-Lv-U9i"/>
-                            <constraint firstItem="Elw-Up-f6x" firstAttribute="top" secondItem="MyM-Xj-0eS" secondAttribute="bottom" constant="8" id="N2K-fd-aMY"/>
                             <constraint firstItem="5WK-T5-rPh" firstAttribute="top" secondItem="t6P-g3-JZh" secondAttribute="bottom" constant="2" id="a6c-ZG-8df"/>
                             <constraint firstItem="ldY-sm-pUl" firstAttribute="top" secondItem="uDH-vj-68g" secondAttribute="bottom" constant="8" id="bP0-70-tdu"/>
                             <constraint firstItem="62w-o7-ex7" firstAttribute="top" secondItem="sfR-j2-fTk" secondAttribute="bottom" constant="2" id="gA7-do-Dzb"/>
@@ -1067,7 +923,7 @@ Once you have completed this process, paste your API key above and press 'Valida
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uD9-ao-rGg" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1087" y="2601"/>
+            <point key="canvasLocation" x="1087" y="3209"/>
         </scene>
         <!--Add Wallet View Controller - Transactions-->
         <scene sceneID="3Kv-TN-AgF">
@@ -1160,7 +1016,7 @@ Once you have completed this process, paste your API key above and press 'Valida
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tQA-B9-kiN" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1477" y="418"/>
+            <point key="canvasLocation" x="1477" y="434"/>
         </scene>
         <!--Transaction Complete View Controller - SendDoge-->
         <scene sceneID="JgT-nL-h3V">
@@ -1178,7 +1034,7 @@ Once you have completed this process, paste your API key above and press 'Valida
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
                                 <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnD-RI-F5W">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnD-RI-F5W">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <color key="tintColor" red="1" green="0.71182316599999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1192,46 +1048,39 @@ Once you have completed this process, paste your API key above and press 'Valida
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0 DOGE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kzN-en-6Ch">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ð1000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="kzN-en-6Ch">
                                 <rect key="frame" x="11" y="66" width="300" height="66"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" text="DGszZCQdH4tLxu4wZ1nerAL5c9WtS1vmHp" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="o5f-31-CI4">
-                                <rect key="frame" x="7" y="148" width="307" height="35"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="DGszZCQdH4tLxu4wZ1nerAL5c9WtS1vmHp" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="o5f-31-CI4">
+                                <rect key="frame" x="7" y="148" width="307" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VZW-tX-k1u">
-                                <rect key="frame" x="7" y="180" width="307" height="79"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VZW-tX-k1u">
+                                <rect key="frame" x="7" y="215" width="307" height="79"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Has successfully been sent to:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZ5-sg-n12">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Has successfully been sent to:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZ5-sg-n12">
                                 <rect key="frame" x="43" y="129" width="234" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="donate.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="OYP-tM-AwT">
-                                <rect key="frame" x="50" y="267" width="220" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="Heh-7A-XNj"/>
-                                    <constraint firstAttribute="width" constant="220" id="bbt-ms-oHT"/>
-                                </constraints>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Network Fee: Ð1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2h-iY-oVF">
+                                <rect key="frame" x="45" y="186" width="233" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="donate.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="OYP-tM-AwT">
+                                <rect key="frame" x="81" y="302" width="160" height="160"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="VZW-tX-k1u" firstAttribute="top" secondItem="o5f-31-CI4" secondAttribute="bottom" constant="8" id="88r-di-XXL"/>
-                            <constraint firstItem="kzN-en-6Ch" firstAttribute="top" secondItem="KnD-RI-F5W" secondAttribute="bottom" constant="16" id="9A0-H9-uxQ"/>
-                            <constraint firstItem="KnD-RI-F5W" firstAttribute="top" secondItem="eKt-5F-yU4" secondAttribute="bottom" id="SKP-qf-QEE"/>
-                            <constraint firstItem="NZ5-sg-n12" firstAttribute="top" secondItem="kzN-en-6Ch" secondAttribute="bottom" constant="8" id="tCj-bN-j3g"/>
-                            <constraint firstItem="o5f-31-CI4" firstAttribute="top" secondItem="NZ5-sg-n12" secondAttribute="bottom" constant="2" id="yUm-Ev-0W4"/>
-                            <constraint firstItem="OYP-tM-AwT" firstAttribute="top" secondItem="VZW-tX-k1u" secondAttribute="bottom" constant="8" id="zcv-Z0-LrB"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Transactions" image="second" id="LKh-hx-J2L"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
@@ -1239,12 +1088,13 @@ Once you have completed this process, paste your API key above and press 'Valida
                         <outlet property="addressview" destination="o5f-31-CI4" id="FyQ-iK-HSW"/>
                         <outlet property="dogelabel" destination="kzN-en-6Ch" id="PdT-EE-eZD"/>
                         <outlet property="donationImg" destination="OYP-tM-AwT" id="BHJ-Pn-Z9G"/>
+                        <outlet property="feelabel" destination="K2h-iY-oVF" id="CNQ-MZ-1ab"/>
                         <outlet property="idview" destination="VZW-tX-k1u" id="VCi-vW-pAv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="73Z-0t-8zx" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1504" y="1140"/>
+            <point key="canvasLocation" x="1477" y="1160"/>
         </scene>
         <!--History View Controller - Wallets-->
         <scene sceneID="okT-DR-JNM">
@@ -1262,7 +1112,7 @@ Once you have completed this process, paste your API key above and press 'Valida
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
                                 <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYr-Fo-mqM">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYr-Fo-mqM">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <color key="tintColor" red="1" green="0.71182316599999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -1292,7 +1142,7 @@ Once you have completed this process, paste your API key above and press 'Valida
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="96"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.000000000 DOGE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="wRR-VV-PHv">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.000000000 Ð" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="wRR-VV-PHv">
                                                     <rect key="frame" x="17" y="9" width="284" height="27"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1320,19 +1170,390 @@ Once you have completed this process, paste your API key above and press 'Valida
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dYr-Fo-mqM" firstAttribute="top" secondItem="UFc-IH-dfz" secondAttribute="bottom" id="Ehf-Sg-3hi"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Wallets" image="second" id="3dv-jg-eb5"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="transactionList" destination="djQ-Wd-nb2" id="ND6-Ay-Xqx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avH-Q6-nz1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1886" y="1140"/>
+            <point key="canvasLocation" x="1884" y="1160"/>
+        </scene>
+        <!--Block Io Key Controller - Settings-->
+        <scene sceneID="i5B-Kr-xDS">
+            <objects>
+                <viewController id="JAa-aU-sdh" customClass="BlockIoKeyController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6ga-HJ-vwX"/>
+                        <viewControllerLayoutGuide type="bottom" id="WzR-Id-Vh0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qfw-NI-6m1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tHN-MK-sOB">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4A-eZ-DHe">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <color key="tintColor" red="1" green="0.71182316599999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Block.io Setup" id="Nnw-jO-hgR">
+                                        <barButtonItem key="rightBarButtonItem" title="Close" id="8v1-dG-ShU">
+                                            <connections>
+                                                <action selector="close:" destination="JAa-aU-sdh" id="3Xt-d4-UuO"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter or paste a new Block.io Dogecoin Key" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rJH-b4-jMn">
+                                <rect key="frame" x="10" y="117" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cOP-8O-BTN">
+                                <rect key="frame" x="10" y="146" width="300" height="1"/>
+                                <color key="backgroundColor" red="0.7875844595" green="0.7875844595" blue="0.7875844595" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Block.io API Key Not Set" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EH-Mj-WDG">
+                                <rect key="frame" x="51" y="81" width="219" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eud-MX-xfl">
+                                <rect key="frame" x="40" y="155" width="240" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Validate Key and Save">
+                                    <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="agree:" destination="Ope-4f-gzM" eventType="touchUpInside" id="dar-f6-FGT"/>
+                                    <action selector="validateKey:" destination="JAa-aU-sdh" eventType="touchUpInside" id="0WL-pg-jKj"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o95-gf-EvM">
+                                <rect key="frame" x="0.0" y="200" width="320" height="368"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="o95-gf-EvM" firstAttribute="leading" secondItem="qfw-NI-6m1" secondAttribute="leading" id="5Yx-Iw-hdj"/>
+                            <constraint firstAttribute="trailing" secondItem="o95-gf-EvM" secondAttribute="trailing" id="Ahn-va-S1c"/>
+                            <constraint firstItem="o95-gf-EvM" firstAttribute="top" secondItem="eud-MX-xfl" secondAttribute="bottom" constant="8" id="Vay-pR-PAQ"/>
+                            <constraint firstItem="WzR-Id-Vh0" firstAttribute="top" secondItem="o95-gf-EvM" secondAttribute="bottom" id="bU8-Gc-vv9"/>
+                            <constraint firstItem="WzR-Id-Vh0" firstAttribute="top" secondItem="o95-gf-EvM" secondAttribute="bottom" id="mfy-KA-Gt0"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="second" id="ibI-zz-yDg"/>
+                    <connections>
+                        <outlet property="doneButton" destination="8v1-dG-ShU" id="jxv-NK-6bD"/>
+                        <outlet property="instructionScroll" destination="o95-gf-EvM" id="jOh-Nx-NZo"/>
+                        <outlet property="instructionView" destination="q06-ER-qAY" id="koW-W1-BIC"/>
+                        <outlet property="keyField" destination="rJH-b4-jMn" id="TIf-W0-Py4"/>
+                        <outlet property="keyboardBar" destination="YXn-0W-3yI" id="jL2-Mc-DhT"/>
+                        <outlet property="validLabel" destination="1EH-Mj-WDG" id="PaC-z7-NGG"/>
+                        <outlet property="validateButton" destination="eud-MX-xfl" id="icC-FX-Ff2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ejt-zg-nf2" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="q06-ER-qAY" userLabel="Instruction View">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="516"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDT-dy-fMJ">
+                            <rect key="frame" x="40" y="416" width="240" height="37"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="Block.io Registration">
+                                <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="blockIoReg:" destination="JAa-aU-sdh" eventType="touchUpInside" id="eui-Dp-UnB"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2O-7D-PEO">
+                            <rect key="frame" x="40" y="461" width="240" height="37"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="Block.io Login">
+                                <color key="titleColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="blockIoLogin:" destination="JAa-aU-sdh" eventType="touchUpInside" id="en5-D1-5Uf"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Block.io Setup Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pW1-vr-Hcj">
+                            <rect key="frame" x="30" y="0.0" width="261" height="45"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="21"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="10000" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="295" translatesAutoresizingMaskIntoConstraints="NO" id="2tw-yn-2Vy">
+                            <rect key="frame" x="13" y="53" width="295" height="355"/>
+                            <attributedString key="attributedText">
+                                <fragment>
+                                    <string key="content">To send Dogecoins using DogeKeeper, you must create an account on http://block.io. Block.io is a robust online wallet used by DogeKeeper, and is in no way affiliated with DogeKeeper or Apple.
+
+Once you have created your account and verified your e-mail address, you can get your API Key from the main Wallet page. Once you are there, click on "Show API Keys". Find the key located next to Dogecoin, and copy and paste it into the field above. Your key should look something like "xxxx-xxxx-xxxx-xxxx", with random letters and numbers. You can use the field above to trim anything extra that may have been copied along with the key. Do not copy any of the other keys, such as Bitcoin or Litecoin. They will not work. Press 'Validate Key and Save' to assure everything is working properly. Once this has been accomplished, you will be able to make Dogecoin transactions with your iOS device.</string>
+                                    <attributes>
+                                        <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <font key="NSFont" size="14" name="Helvetica-Light"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                </view>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" id="YXn-0W-3yI">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="7ZC-kE-xyx"/>
+                        <barButtonItem title="Done" id="L5P-A1-jha">
+                            <connections>
+                                <action selector="keyboardDone:" destination="JAa-aU-sdh" id="BD6-9H-osg"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <color key="tintColor" red="1" green="0.71182316599999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="barTintColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                </toolbar>
+            </objects>
+            <point key="canvasLocation" x="1087" y="2522"/>
+        </scene>
+        <!--Exchange Rate View Controller - Exchange Rates-->
+        <scene sceneID="cGT-Rp-Yt6">
+            <objects>
+                <viewController id="DHk-my-eQn" customClass="ExchangeRateViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="k1E-ny-0vu"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Kz-cw-Dr7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NLF-iI-QDd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="niv-H5-Fhx">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yqG-k1-Ajc">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <color key="tintColor" red="1" green="0.71182316599999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Loading..." id="i3n-Yc-ab3">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="refresh" id="tgc-hK-5aR">
+                                            <connections>
+                                                <action selector="refreshButton:" destination="DHk-my-eQn" id="n0T-vY-tQW"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="RBw-S6-q1e">
+                                <rect key="frame" x="0.0" y="133" width="320" height="386"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="68" id="037-8E-gkb">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="68"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="037-8E-gkb" id="9aR-CK-0P7">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="25" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.2 USD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.34999999403953552" translatesAutoresizingMaskIntoConstraints="NO" id="QPw-28-EpZ">
+                                                    <rect key="frame" x="20" y="7" width="280" height="32"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="50" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exchange: Cryptsy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vb0-cT-Tep">
+                                                    <rect key="frame" x="73" y="36" width="175" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="DHk-my-eQn" id="2L1-Q2-a2k"/>
+                                    <outlet property="delegate" destination="DHk-my-eQn" id="JFd-Nt-djI"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s9Z-Xv-hsk">
+                                <rect key="frame" x="0.0" y="64" width="320" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1000" placeholder="0.00000000" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="17x-ME-dFL">
+                                        <rect key="frame" x="15" y="28" width="285" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="amountFieldChanged:" destination="DHk-my-eQn" eventType="editingChanged" id="cNF-FA-9nY"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Amount Ɖ:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oxw-83-tsm">
+                                        <rect key="frame" x="16" y="9" width="106" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RBw-S6-q1e" firstAttribute="leading" secondItem="NLF-iI-QDd" secondAttribute="leading" id="9Be-U7-AbF"/>
+                            <constraint firstItem="1Kz-cw-Dr7" firstAttribute="top" secondItem="RBw-S6-q1e" secondAttribute="bottom" id="EhJ-42-cKC"/>
+                            <constraint firstItem="RBw-S6-q1e" firstAttribute="top" secondItem="yqG-k1-Ajc" secondAttribute="bottom" constant="69" id="XMW-dC-zHG"/>
+                            <constraint firstAttribute="trailing" secondItem="RBw-S6-q1e" secondAttribute="trailing" id="oKF-Qk-PJv"/>
+                            <constraint firstItem="s9Z-Xv-hsk" firstAttribute="top" secondItem="yqG-k1-Ajc" secondAttribute="bottom" id="vG3-Jj-kfW"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Exchange Rates" image="LineChart" id="Wkn-tP-NMD"/>
+                    <connections>
+                        <outlet property="dogeAmountField" destination="17x-ME-dFL" id="lx7-jA-Zhe"/>
+                        <outlet property="keyboardBar" destination="he7-LK-WHA" id="WSf-pO-pDi"/>
+                        <outlet property="navBar" destination="yqG-k1-Ajc" id="5cS-Eh-hgq"/>
+                        <outlet property="priceList" destination="RBw-S6-q1e" id="Qd1-5h-QOI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Ya-hS-6yf" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" id="he7-LK-WHA">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="czb-TC-KHb"/>
+                        <barButtonItem title="Done" id="4IA-bK-FHl">
+                            <connections>
+                                <action selector="keyboardDone:" destination="DHk-my-eQn" id="C32-zv-ijp"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <color key="tintColor" red="1" green="0.71182316599999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="barTintColor" red="0.17254901959999999" green="0.25098039220000001" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                </toolbar>
+            </objects>
+            <point key="canvasLocation" x="653" y="1860"/>
+        </scene>
+        <!--Announcement View Controller - Settings-->
+        <scene sceneID="k36-Hk-egA">
+            <objects>
+                <viewController id="aiN-ob-hx6" customClass="AnnouncementViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DRv-aD-D8O"/>
+                        <viewControllerLayoutGuide type="bottom" id="e0u-Yo-MxV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ov7-yo-fgE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F5w-tv-RZg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNA-Ys-7rH">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <color key="tintColor" red="1" green="0.71182316599999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Announcements" id="6Dl-yS-b20">
+                                        <barButtonItem key="rightBarButtonItem" title="Close" id="zkT-5m-ozR">
+                                            <connections>
+                                                <action selector="close:" destination="aiN-ob-hx6" id="iRJ-0x-qyv"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="chu-ba-Uv5">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="chu-ba-Uv5" firstAttribute="top" secondItem="oNA-Ys-7rH" secondAttribute="bottom" id="HbN-uT-Laz"/>
+                            <constraint firstItem="chu-ba-Uv5" firstAttribute="leading" secondItem="Ov7-yo-fgE" secondAttribute="leading" id="Sye-Qw-9fr"/>
+                            <constraint firstAttribute="trailing" secondItem="chu-ba-Uv5" secondAttribute="trailing" id="VH7-FR-XnY"/>
+                            <constraint firstItem="e0u-Yo-MxV" firstAttribute="top" secondItem="chu-ba-Uv5" secondAttribute="bottom" id="ja8-iG-U4K"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings" id="sdP-L4-DvN"/>
+                    <connections>
+                        <outlet property="announcementView" destination="chu-ba-Uv5" id="fca-eG-MNc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nbh-8C-dca" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1087" y="1860"/>
+        </scene>
+        <!--Urgent Announcement View Controller - Settings-->
+        <scene sceneID="Qyc-dV-Pnv">
+            <objects>
+                <viewController id="cQb-B2-4Jo" customClass="UrgentAnnouncementViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="odV-Wc-35p"/>
+                        <viewControllerLayoutGuide type="bottom" id="jaH-nk-lTZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dXp-IW-eAi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fBp-B0-yk6">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cx9-iR-NE6">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <color key="tintColor" red="1" green="0.71182316599999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Urgent Announcement" id="a44-VJ-99e">
+                                        <barButtonItem key="leftBarButtonItem" id="s0a-wD-Hu8"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Close" id="rZO-ah-Ylw"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="As6-2O-Oj4">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="As6-2O-Oj4" firstAttribute="leading" secondItem="dXp-IW-eAi" secondAttribute="leading" id="A6q-Xd-xsX"/>
+                            <constraint firstItem="jaH-nk-lTZ" firstAttribute="top" secondItem="As6-2O-Oj4" secondAttribute="bottom" id="Zvm-MJ-75u"/>
+                            <constraint firstAttribute="trailing" secondItem="As6-2O-Oj4" secondAttribute="trailing" id="avU-Hj-hWA"/>
+                            <constraint firstItem="As6-2O-Oj4" firstAttribute="top" secondItem="cx9-iR-NE6" secondAttribute="bottom" id="pLP-Vl-iHz"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings" id="kCO-2G-qt8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="grh-Yb-KiD" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1477" y="1860"/>
         </scene>
     </scenes>
     <resources>
         <image name="Coins" width="30" height="30"/>
+        <image name="LineChart" width="30" height="30"/>
+        <image name="Megaphone" width="30" height="30"/>
         <image name="Settings" width="30" height="30"/>
         <image name="Wallet" width="30" height="30"/>
         <image name="dknobg.png" width="1024" height="1024"/>

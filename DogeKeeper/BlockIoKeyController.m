@@ -1,18 +1,18 @@
 //
-//  ApiKeyViewController.m
+//  BlockIoKeyController.m
 //  DogeKeeper
 //
-//  Created by Andrew on 5/18/14.
-//  Copyright (c) 2014 Andrew Arpasi. Licensed under CC BY-NC-ND 4.0
+//  Created by Andrew on 7/27/14.
+//  Copyright (c) 2014 Andrew Arpasi. All rights reserved.
 //
 
-#import "ApiKeyViewController.h"
+#import "BlockIoKeyController.h"
 
-@interface ApiKeyViewController ()
+@interface BlockIoKeyController ()
 
 @end
 
-@implementation ApiKeyViewController
+@implementation BlockIoKeyController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,11 +28,11 @@
     [super viewDidLoad];
     [instructionScroll addSubview:instructionView];
     ((UIScrollView *)instructionScroll).contentSize = instructionView.frame.size;
-    DogeAPIHandler * api = [[DogeAPIHandler alloc] init];
-    if([api checkDogeAPIAccount])
+    BlockIOHandler * api = [[BlockIOHandler alloc] init];
+    if([api checkAccount])
     {
         validLabel.textColor = [UIColor colorWithRed:0.156 green:0.512 blue:0.001 alpha:1.000];
-        validLabel.text = @"DogeAPI Key Set";
+        validLabel.text = @"Block.io API Key Set";
     }
     keyField.inputAccessoryView = keyboardBar;
 }
@@ -43,23 +43,27 @@
 {
     [keyField resignFirstResponder];
 }
--(IBAction)dogeApiRegister:(id)sender
+-(IBAction)blockIoReg:(id)sender
 {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.dogeapi.com/register"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://block.io/users/sign_up"]];
 }
--(IBAction)dogeApiSettings:(id)sender
+-(IBAction)blockIoLogin:(id)sender
 {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.dogeapi.com/settings"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://block.io/users/sign_in"]];
 }
 -(IBAction)close:(id)sender
 {
+    BlockIOHandler * api = [[BlockIOHandler alloc] init];
     [self dismissViewControllerAnimated:TRUE completion:^{
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"SendSuccessNotification" object:nil];
+        if([api checkAccount])
+        {
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"SendSuccessNotification" object:nil];
+        }
     }];
 }
 -(IBAction)validateKey:(id)sender
 {
-    if([keyField.text  isEqual: @""])
+    if([keyField.text isEqual: @""])
     {
         UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please enter a valid key into the field." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
@@ -69,17 +73,17 @@
     doneButton.enabled = FALSE;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,
                                              (unsigned long)NULL), ^(void) {
-        DogeAPIHandler * api = [[DogeAPIHandler alloc] init];
+        BlockIOHandler * api = [[BlockIOHandler alloc] init];
         validateButton.enabled = FALSE;
         __block BOOL isValid;
-        isValid = [api validateDogeAPIAccount:keyField.text];
+        isValid = [api validateAccount:[keyField.text stringByReplacingOccurrencesOfString:@" " withString:@""]];
         if(isValid)
         {
             dispatch_sync(dispatch_get_main_queue(), ^{
-                [api addDogeAPIAccount:keyField.text];
+                [api addAccount:[keyField.text stringByReplacingOccurrencesOfString:@" " withString:@""]];
                 validLabel.textColor = [UIColor colorWithRed:0.156 green:0.512 blue:0.001 alpha:1.000];
-                validLabel.text = @"DogeAPI Key Set";
-                UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Such Validate" message:@"Your DogeAPI account is properly setup and is ready for use with DogeKeeper!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                validLabel.text = @"Block.io API Key Set";
+                UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Such Validate" message:@"Your Block.io account is properly setup and is ready for use with DogeKeeper!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
                 [alert show];
                 NSLog(@"key %@",[api getApiKey]);
             });
@@ -98,8 +102,6 @@
             [validateButton setTitle:@"Validate Key and Save" forState:UIControlStateNormal];
         });
     });
-    
-    
 }
 - (void)didReceiveMemoryWarning
 {

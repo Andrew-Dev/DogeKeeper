@@ -10,12 +10,14 @@
 #import "DogecoinWallet.h"
 #import "DogeChainHandler.h"
 #import "WalletDetailViewController.h"
+#import "AnnouncementHandler.h"
 
 @interface WalletListController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 {
     IBOutlet UITableView * walletListView;
     IBOutlet UINavigationBar * navBar;
     UIRefreshControl * refreshControl;
+    NSNumber * walletsTotal;
     NSData * walletData;
 }
 @end

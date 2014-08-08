@@ -33,12 +33,25 @@
         error = @"Invalid data recieved from DogeChain server.";
         return @"Error.";
     }
-
 }
 -(NSString*)getDogeBalance:(NSString*)address
 {
     NSURL * dogeChainRequest = [NSURL URLWithString:[NSString stringWithFormat:@"https://dogechain.info/chain/Dogecoin/q/addressbalance/%@",address]];
     return [self makeDogeChainRequest:dogeChainRequest];
+}
+-(NSNumber*)getTotalBalance:(NSMutableArray*)addresses
+{
+    NSNumber * walletsTotal;
+    double totalBalance = 0;
+    for(int i=0;i<[addresses count];i++)
+    {
+        NSString * balanceAsString = [self getDogeBalance:[addresses objectAtIndex:i]];
+        double balance = [balanceAsString doubleValue];
+        totalBalance = totalBalance + balance;
+        NSLog(@"tb: %f",totalBalance);
+    }
+    walletsTotal = [[NSNumber alloc] initWithDouble:totalBalance];
+    return walletsTotal;
 }
 -(NSString*)getDogeRecieved:(NSString*)address
 {

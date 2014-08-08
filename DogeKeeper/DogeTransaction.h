@@ -15,6 +15,7 @@
 @property NSNumber * amount;
 @property NSString * toAddress;
 @property NSDate * dateSent;
+@property NSNumber * networkFee;
 
 +(NSMutableArray*)getAllTransactions;
 +(void)addTransactionToHistory:(DogeTransaction*)transaction;

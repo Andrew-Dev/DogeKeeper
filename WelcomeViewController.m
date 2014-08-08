@@ -30,7 +30,9 @@
 }
 -(IBAction)agree:(id)sender
 {
-    [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"agreed"];
+    //[[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"agreed"];
+    //[[NSUserDefaults standardUserDefaults] synchronize];
+    [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"firstlaunch"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [self dismissViewControllerAnimated:TRUE completion:nil];
 }

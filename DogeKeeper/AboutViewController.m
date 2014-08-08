@@ -65,6 +65,10 @@
 {
     [self openWebURL:@"http://dogechain.info"];
 }
+-(IBAction)SoChain:(id)sender
+{
+    [self openWebURL:@"http://chain.so"];
+}
 -(IBAction)bcscanner:(id)sender
 {
     [self openWebURL:@"https://github.com/michaelochs/BCScanner"];

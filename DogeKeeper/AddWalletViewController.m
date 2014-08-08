@@ -50,7 +50,6 @@
 -(IBAction)scanQR:(id)sender
 {
     if ([BCScannerViewController scannerAvailable]) {
-        NSLog(@"the crap is available");
 		BCScannerViewController *scanner = [[BCScannerViewController alloc] init];
 		scanner.delegate = self;
 		scanner.codeTypes = @[ BCScannerQRCode ];

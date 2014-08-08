@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DogeAPIHandler.h"
+#import "BlockIOHandler.h"
 #import "DogeTransaction.h"
 #import "TransactionCompleteViewController.h"
 #import "BCScannerViewController.h"

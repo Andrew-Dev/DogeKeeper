@@ -1,15 +1,15 @@
 //
-//  ApiKeyViewController.h
+//  BlockIoKeyController.h
 //  DogeKeeper
 //
-//  Created by Andrew on 5/18/14.
-//  Copyright (c) 2014 Andrew Arpasi. Licensed under CC BY-NC-ND 4.0
+//  Created by Andrew on 7/27/14.
+//  Copyright (c) 2014 Andrew Arpasi. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "DogeAPIHandler.h"
+#import "BlockIOHandler.h"
 
-@interface ApiKeyViewController : UIViewController
+@interface BlockIoKeyController : UIViewController
 {
     IBOutlet UITextField * keyField;
     IBOutlet UILabel * validLabel;
@@ -18,5 +18,7 @@
     IBOutlet UIView * keyboardBar;
     IBOutlet UIButton * validateButton;
     IBOutlet UIBarButtonItem * doneButton;
+    IBOutlet UIBarButtonItem * unlinkButton;
+
 }
 @end

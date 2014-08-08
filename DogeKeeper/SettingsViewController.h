@@ -7,15 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DogeAPIHandler.h"
-#import "EncryptionHelper.h"
+#import "BlockIOHandler.h"
+#import "AnnouncementHandler.h"
 
-@interface SettingsViewController : UIViewController
+@interface SettingsViewController : UIViewController <NSObject>
 {
-    DogeAPIHandler * api;
     IBOutlet UIButton * unlinkButton;
-    IBOutlet UISwitch * feeSwitch;
-    IBOutlet UIButton * setPassButton;
-    IBOutlet UIButton * removePassButton;
+    IBOutlet UILabel * announcementLabel;
 }
 @end

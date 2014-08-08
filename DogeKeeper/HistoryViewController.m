@@ -70,7 +70,7 @@
      [numformatter setMaximumFractionDigits:4];
      [numformatter setRoundingMode: NSNumberFormatterRoundUp];
      NSString * value = [numformatter stringFromNumber:transaction.amount];
-     valueLabel.text = [NSString stringWithFormat:@"%@ DOGE",value];
+     valueLabel.text = [NSString stringWithFormat:@"%@ Ɖ",value];
      NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
      [formatter setDateFormat:@"MM/dd/yyyy hh:mm a"];
      dateLabel.text = [formatter stringFromDate:transaction.dateSent];

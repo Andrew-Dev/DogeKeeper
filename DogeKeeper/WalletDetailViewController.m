@@ -26,6 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    scrollView.scrollEnabled = FALSE;
     [scrollView addSubview:detailView];
     ((UIScrollView *)scrollView).contentSize = detailView.frame.size;
     DogecoinWallet * wallet = [NSKeyedUnarchiver unarchiveObjectWithData:walletData];
@@ -33,34 +34,26 @@
     titleLabel.text = wallet.title;
     balanceLabel.text = @"Loading Balance...";
     recievedLabel.text = @"Loading Recieved...";
-    addressView.text = wallet.address;
+    [addressBtn setTitle:wallet.address forState:UIControlStateNormal];
     DogeChainHandler * chain = [[DogeChainHandler alloc] init];
     if(wallet.isApi)
     {
         balanceLabel.hidden = TRUE;
         recievedLabel.hidden = TRUE;
+        dogechainButton.hidden = TRUE;
     }
     else{
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,
                                                  (unsigned long)NULL), ^(void) {
             NSString * balance = [chain getDogeBalance:wallet.address];
-            NSString * recieved = [chain getDogeRecieved:wallet.address];
             dispatch_sync(dispatch_get_main_queue(), ^{
                 if(balance != nil && ![balance isEqualToString:@"Error."])
                 {
-                    balanceLabel.text = [NSString stringWithFormat:@"Balance: %@ DOGE",balance];
+                    balanceLabel.text = [NSString stringWithFormat:@"Balance: Ɖ%@",balance];
                 }
                 else
                 {
                     balanceLabel.text = @"Error retrieving total recieved.";
-                }
-                if(recieved != nil && ![recieved isEqualToString:@"Error."])
-                {
-                    recievedLabel.text = [NSString stringWithFormat:@"Total Recieved: %@ DOGE",balance];
-                }
-                else
-                {
-                    recievedLabel.text = @"Error retrieving total recieved.";
                 }
             });
         });
@@ -75,7 +68,7 @@
 }
 -(void)keyboardDidAppear:(NSNotification*)notification
 {
-    //(@"the thing is up");
+    scrollView.scrollEnabled = TRUE;
     CGRect keyboardFrame = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
     UIWindow *window = [[[UIApplication sharedApplication] windows]objectAtIndex:0];
     CGRect keyboardFrameConverted = [self.view convertRect:keyboardFrame fromView:window];
@@ -95,6 +88,7 @@
     if([[[notification userInfo] valueForKey:@"UIKeyboardFrameChangedByUserInteraction"] intValue] == 0)
     {
         [scrollView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
+        scrollView.scrollEnabled = FALSE;
     }
 }
 -(BOOL)disablesAutomaticKeyboardDismissal {
@@ -119,6 +113,23 @@
     {
         qrView.image = [UIImage mdQRCodeForString:[NSString stringWithFormat:@"dogecoin:%@",wallet.address] size:qrView.bounds.size.width];
     }
+}
+-(IBAction)viewOnDogeChain:(id)sender
+{
+    DogecoinWallet * wallet = [NSKeyedUnarchiver unarchiveObjectWithData:walletData];
+    [[UIApplication sharedApplication] openURL:[[NSURL alloc] initWithString:[NSString stringWithFormat:@"http://dogechain.info/address/%@",wallet.address]]];
+}
+-(IBAction)copyAddress:(id)sender
+{
+    UIPasteboard *clipboard = [UIPasteboard generalPasteboard];
+    DogecoinWallet * wallet = [NSKeyedUnarchiver unarchiveObjectWithData:walletData];
+    [clipboard setString:wallet.address];
+    copiedLabel.hidden = FALSE;
+    [self performSelector:@selector(hidecopiedlabel) withObject:nil afterDelay:3];
+}
+-(void)hidecopiedlabel
+{
+    copiedLabel.hidden = TRUE;
 }
 - (void)didReceiveMemoryWarning
 {

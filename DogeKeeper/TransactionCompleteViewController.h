@@ -15,6 +15,7 @@
     IBOutlet UITextView * addressview;
     IBOutlet UILabel * dogelabel;
     IBOutlet UIImageView * donationImg;
+    IBOutlet UILabel * feelabel;
 }
 
 @property NSData * transactionData;

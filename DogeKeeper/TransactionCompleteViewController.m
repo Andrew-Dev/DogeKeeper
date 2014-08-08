@@ -31,7 +31,8 @@
     transaction.dateSent = [NSDate date];
     idview.text = [NSString stringWithFormat:@"Transaction ID:\n%@",transaction.transactionID];
     addressview.text = transaction.toAddress;
-    dogelabel.text = [NSString stringWithFormat:@"%.6f DOGE",[transaction.amount doubleValue]];
+    dogelabel.text = [NSString stringWithFormat:@"Ɖ%.6f",[transaction.amount doubleValue]];
+    feelabel.text = [NSString stringWithFormat:@"Network Fee: Ɖ%f",[transaction.networkFee doubleValue]];
     [DogeTransaction addTransactionToHistory:transaction];
     if([transaction.toAddress isEqual: @"DGszZCQdH4tLxu4wZ1nerAL5c9WtS1vmHp"])
     {

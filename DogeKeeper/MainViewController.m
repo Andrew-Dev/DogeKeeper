@@ -34,7 +34,7 @@
 {
     if([[notification name] isEqualToString:@"NoAPINotification"])
     {
-        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"DogeAPI Not Setup" message:@"Please set up a DogeAPI account in the settings page to use this feature." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Block.io Not Setup" message:@"Please set up a Block.io account in the settings page to use this feature." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
     }
 }

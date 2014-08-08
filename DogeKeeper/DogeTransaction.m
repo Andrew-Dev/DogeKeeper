@@ -9,7 +9,7 @@
 #import "DogeTransaction.h"
 
 @implementation DogeTransaction
-@synthesize transactionID,amount,toAddress,dateSent;
+@synthesize transactionID,amount,toAddress,dateSent,networkFee;
 
 - (id)initWithCoder:(NSCoder *)decoder
 {
@@ -19,6 +19,7 @@
         amount = [decoder decodeObjectForKey:@"amount"];
         transactionID = [decoder decodeObjectForKey:@"transactionID"];
         dateSent = [decoder decodeObjectForKey:@"dateSent"];
+        networkFee = [decoder decodeObjectForKey:@"networkFee"];
     }
     return self;
 }
@@ -28,6 +29,7 @@
     [encoder encodeObject:amount forKey:@"amount"];
     [encoder encodeObject:transactionID forKey:@"transactionID"];
     [encoder encodeObject:dateSent forKey:@"dateSent"];
+    [encoder encodeObject:networkFee forKey:@"networkFee"];
 }
 +(NSMutableArray*)getAllTransactions
 {

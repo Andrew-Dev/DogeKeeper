@@ -22,18 +22,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    if([[NSUserDefaults standardUserDefaults] boolForKey:@"firstrun"] != TRUE)
-    {
-        [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"addfee"];
-        [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"firstrun"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-        NSLog(@"first run");
-    }
-    if([[NSUserDefaults standardUserDefaults] boolForKey:@"disabled"] == TRUE)
-    {
-        [self performSegueWithIdentifier:@"disabledSegue" sender:nil];
-        return;
-    }
+    walletsTotal = [[NSNumber alloc] initWithDouble:0];
     refreshControl = [[UIRefreshControl alloc] init];
     [refreshControl addTarget:self action:@selector(refresh:) forControlEvents:UIControlEventValueChanged];
     [walletListView addSubview:refreshControl];
@@ -44,12 +33,13 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    if([[NSUserDefaults standardUserDefaults] boolForKey:@"agreed"] != TRUE)
+    if([[NSUserDefaults standardUserDefaults] boolForKey:@"firstlaunch"] != TRUE)
     {
         [self performSegueWithIdentifier:@"IntroSegue" sender:nil];
+        NSLog(@"first run");
     }
 }
-- (void)refresh:(UIRefreshControl *)refControl
+-(void)refresh:(UIRefreshControl *)refControl
 {
     [walletListView reloadData];
     [refreshControl endRefreshing];
@@ -69,7 +59,6 @@
     // Return the number of sections.
     return 1;
 }
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
@@ -98,7 +87,7 @@
         dispatch_sync(dispatch_get_main_queue(), ^{
             if(balance != nil && ![balance isEqualToString:@"Error."])
             {
-                balanceLabel.text = [NSString stringWithFormat:@"Balance: %@ DOGE",balance];
+                balanceLabel.text = [NSString stringWithFormat:@"Ɖ %@",balance];
             }
             else
             {
@@ -106,7 +95,6 @@
             }
         });
     });
-    
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -116,7 +104,6 @@
     walletData = [walletsData objectAtIndex:indexPath.row];
     [self performSegueWithIdentifier:@"walletListDetailSegue" sender:nil];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-
 }
 
  // Override to support conditional editing of the table view.
@@ -136,11 +123,11 @@
 
 
  // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
+-(BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Return NO if you do not want the item to be re-orderable.
+    return YES;
+}
 
 //deletion
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
@@ -152,16 +139,15 @@
         [[NSUserDefaults standardUserDefaults] setObject:wallets forKey:@"wallets"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [tableView reloadData];
     }
 }
-
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
  #pragma mark - Navigation
  

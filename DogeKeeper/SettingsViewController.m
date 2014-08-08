@@ -22,29 +22,39 @@
     }
     return self;
 }
--(IBAction)setApi:(id)sender
+-(IBAction)setDogeApi:(id)sender
 {
-    [self performSegueWithIdentifier:@"apiSegue" sender:nil];
+    [self performSegueWithIdentifier:@"apiSegue" sender:sender];
+}
+-(IBAction)setBlockIO:(id)sender
+{
+    [self performSegueWithIdentifier:@"blockSegue" sender:sender];
 }
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    api = [[DogeAPIHandler alloc] init];
-    feeSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"addfee"];
-    if([api checkDogeAPIAccount])
-    {
-        unlinkButton.enabled = TRUE;
-    }
-    else
-    {
-        unlinkButton.enabled = FALSE;
-    }
-    // Do any additional setup after loading the view.
+    announcementLabel.hidden = TRUE;
 }
 -(void)viewDidAppear:(BOOL)animated
 {
-    feeSwitch.on = [[NSUserDefaults standardUserDefaults] boolForKey:@"addfee"];
-    if([api checkDogeAPIAccount])
+    [super viewDidAppear:animated];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,
+                                             (unsigned long)NULL), ^(void) {
+        BOOL hideAnnouncementLabel = FALSE;
+        if([AnnouncementHandler isUrgentAnnouncement] && ![AnnouncementHandler readUrgentAnnouncement])
+        {
+            hideAnnouncementLabel = FALSE;
+        }
+        else
+        {
+            hideAnnouncementLabel = TRUE;
+        }
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            announcementLabel.hidden = hideAnnouncementLabel;
+        });
+    });
+    BlockIOHandler * api = [[BlockIOHandler alloc] init];
+    if([api checkAccount])
     {
         unlinkButton.enabled = TRUE;
     }
@@ -57,6 +67,19 @@
 {
     [self performSegueWithIdentifier:@"aboutSegue" sender:nil];
 }
+<<<<<<< HEAD
+-(IBAction)announcements:(id)sender
+{
+    [self performSegueWithIdentifier:@"announcementSegue" sender:nil];
+}
+-(IBAction)removeAccount:(id)sender
+{
+    BlockIOHandler * api = [[BlockIOHandler alloc] init];
+    [api removeAccount];
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Block.io Key Removed" message:@"Your Block.io Dogecoin Key has been removed from DogeKeeper." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
+    unlinkButton.enabled = FALSE;
+=======
 - (IBAction)toggleFee:(id)sender
 {
     [[NSUserDefaults standardUserDefaults] setBool:feeSwitch.on forKey:@"addfee"];
@@ -72,6 +95,7 @@
         [alert show];
         unlinkButton.enabled = FALSE;
     }
+>>>>>>> FETCH_HEAD
 }
 - (void)didReceiveMemoryWarning
 {

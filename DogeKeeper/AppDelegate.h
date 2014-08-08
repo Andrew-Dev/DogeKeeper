@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EncryptionHelper.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DogeAPIHandler.h"
+#import "BlockIOHandler.h"
 #import "DogecoinWallet.h"
 #import "WalletDetailViewController.h"
 
@@ -21,6 +21,7 @@
     IBOutlet UIView * setupView;
     IBOutlet UIButton * reloadButton;
     IBOutlet UIButton * addressButton;
+    UIRefreshControl * refreshControl;
     NSArray * addresses;
     NSNumber * balance;
     DogecoinWallet * selectedWallet;

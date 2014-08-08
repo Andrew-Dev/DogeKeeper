@@ -17,11 +17,13 @@
     IBOutlet UILabel * balanceLabel;
     IBOutlet UILabel * recievedLabel;
     IBOutlet UILabel * titleLabel;
-    IBOutlet UITextView * addressView;
+    IBOutlet UIButton * addressBtn;
+    IBOutlet UIButton * dogechainButton;
     IBOutlet UITextField * amountField;
     IBOutlet UIScrollView * scrollView;
     IBOutlet UIView * detailView;
     IBOutlet UIToolbar * keyboardBar;
+    IBOutlet UILabel * copiedLabel;
 }
 @property NSData * walletData;
 

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>58D1F5F1-A270-4E20-9220-EE63D55E35AB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>DogeKeeper</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3BEB338D-BAF1-4438-9ADD-75E41B72459F</key>
+		<string>ssh://github.com/Andrew-Dev/DogeKeeper.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>DogeKeeper.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3BEB338D-BAF1-4438-9ADD-75E41B72459F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/Andrew-Dev/DogeKeeper.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3BEB338D-BAF1-4438-9ADD-75E41B72459F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3BEB338D-BAF1-4438-9ADD-75E41B72459F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>DogeKeeper</string>
+		</dict>
+	</array>
+</dict>
+</plist>

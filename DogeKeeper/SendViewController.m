@@ -68,20 +68,23 @@
 }
 -(IBAction)send:(id)sender
 {
-    if(amountField.text.doubleValue == 0)
+    [addressField resignFirstResponder];
+    [amountField resignFirstResponder];
+    [pinField resignFirstResponder];
+    if(amountField.text.doubleValue < 2)
     {
-        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Cannot Send DogeCoins" message:@"Please enter a value higher than 0." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Cannot Send Dogecoins" message:@"Please enter a value 2 or greater." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
         return;
     }
-    DogeAPIHandler * api = [[DogeAPIHandler alloc] init];
-    UIAlertView * loadingAlert = [[UIAlertView alloc] initWithTitle:@"Performing Transaction..." message:@"Please Wait... This may take a while." delegate:self cancelButtonTitle:nil otherButtonTitles:nil, nil];
+    BlockIOHandler * api = [[BlockIOHandler alloc] init];
+    UIAlertView * loadingAlert = [[UIAlertView alloc] initWithTitle:@"Performing Transaction..." message:@"Please Wait..." delegate:self cancelButtonTitle:nil otherButtonTitles:nil, nil];
     [loadingAlert show];
     __block BOOL tstatus;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,
                                              (unsigned long)NULL), ^(void) {
-        tstatus = [api makeDogeTransaction:[self calculateValueToSend:[amountField.text doubleValue]] toAddress:addressField.text withPin:pinField.text];
-        double sendamount = [self calculateDisplayedValue:[amountField.text doubleValue]];
+        tstatus = [api makeDogeTransaction:[amountField.text doubleValue] toAddress:addressField.text withPin:pinField.text];
+        double sendamount = [amountField.text doubleValue];
         NSLog(@"tstatus: %d",tstatus);
         if(tstatus == TRUE)
         {
@@ -91,6 +94,8 @@
             NSLog(@"send amount %f",sendamount);
             NSLog(@"transaction amount %f",[transaction.amount doubleValue]);
             transaction.transactionID = [api getTransactionID];
+            NSLog(@"transaction netfee: %f",[transaction.networkFee doubleValue]);
+            transaction.networkFee = [[NSNumber alloc] initWithDouble:[api getNetworkFee]];
             transactionData = [NSKeyedArchiver archivedDataWithRootObject:transaction];
             dispatch_sync(dispatch_get_main_queue(), ^{
                 [self performSegueWithIdentifier:@"transactionSegue" sender:nil];
@@ -102,58 +107,19 @@
                 dispatch_sync(dispatch_get_main_queue(), ^{
                     [loadingAlert dismissWithClickedButtonIndex:0 animated:TRUE];
                     NSString * apierror = [api getError];
-                    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Error Sending DogeCoins" message:apierror delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Error Sending Dogecoin" message:apierror delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
                     [alert show];
                 });
             }
     });
 }
--(double)calculateValueToSend:(double)value
-{
-    if([[NSUserDefaults standardUserDefaults] boolForKey:@"addfee"] == TRUE)
-    {
-        return [self calculatePostFeeValue:value];
-    }
-    else
-    {
-        return value;
-    }
-}
 -(double)calculateDisplayedValue:(double)value
 {
-    if([[NSUserDefaults standardUserDefaults] boolForKey:@"addfee"] == TRUE)
-    {
-        return value;
-    }
-    else
-    {
-        return [self calculatePostFeeValue:value];
-        
-    }
-}
--(double)calculatePostFeeValue:(double)value
-{
-    if([[NSUserDefaults standardUserDefaults] boolForKey:@"addfee"] == TRUE)
-    {
-        NSLog(@"adding");
-        NSLog(@"ADDFEE: %d",[[NSUserDefaults standardUserDefaults] boolForKey:@"addfee"]);
-        // amount/0.995
-        value = value/0.995;
-        return value;
-    }
-    else
-    {
-        NSLog(@"not adding");
-        double fee = 0.005*value;
-        value = value - fee;
-        NSLog(@"value: %f",value);
-        return value;
-    }
+    return value + 1;
 }
 -(IBAction)scanAddressQR:(id)sender
 {
     if ([BCScannerViewController scannerAvailable]) {
-        NSLog(@"the crap is available");
 		BCScannerViewController *scanner = [[BCScannerViewController alloc] init];
 		scanner.delegate = self;
 		scanner.codeTypes = @[ BCScannerQRCode ];
@@ -161,7 +127,7 @@
     }
 }
 - (IBAction)editingChanged:(id)sender {
-    feeLabel.text = [NSString stringWithFormat:@"%f After 0.5%% DogeAPI fee.",[self calculatePostFeeValue:[amountField.text doubleValue]]];
+    feeLabel.text = [NSString stringWithFormat:@"%f After 1Ɖ estimated network fee.",[self calculateDisplayedValue:[amountField.text doubleValue]]];
 }
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -170,7 +136,6 @@
 }
 -(void)keyboardDidAppear:(NSNotification*)notification
 {
-    //(@"the thing is up");
     CGRect keyboardFrame = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
     UIWindow *window = [[[UIApplication sharedApplication] windows]objectAtIndex:0];
     CGRect keyboardFrameConverted = [self.view convertRect:keyboardFrame fromView:window];
@@ -215,7 +180,6 @@
     {
         NSString * params = [[code componentsSeparatedByString:@"?"] objectAtIndex:1];
         NSArray * paramArray = [params componentsSeparatedByString:@"&"];
-        NSLog(@"pa count: ",[paramArray count]);
         for(int i=0;i<[paramArray count];i++)
         {
             if([[paramArray objectAtIndex:i] rangeOfString:@"amount"].location!= NSNotFound)
