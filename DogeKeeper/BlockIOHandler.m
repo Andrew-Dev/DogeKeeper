@@ -40,6 +40,16 @@
 {
     return error;
 }
++(void)setVersion:(int)version
+{
+    [[NSUserDefaults standardUserDefaults] setInteger:version forKey:@"version"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
++(int)getVersion
+{
+    int version = (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"version"];
+    return version;
+}
 -(double)getNetworkFee
 {
     return networkfee;
@@ -62,7 +72,7 @@
 -(BOOL)validateAccount:(NSString *)apikey
 {
     NSLog(@"validate account method");
-    NSURL * request = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"https://block.io/api/v1/get_balance/?api_key=%@",apikey]];
+    NSURL * request = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"https://block.io/api/v%d/get_balance/?api_key=%@",[BlockIOHandler getVersion], apikey]];
     NSLog(@"req absolute string: %@",[request path]);
     NSString * response = [self makeUrlRequest:request];
     NSLog(@"response: %@",response);
@@ -86,6 +96,7 @@
         else
         {
             error = @"The network is not DOGE. You must have entered the wrong API key.";
+            return FALSE;
         }
     }
     else if([validationdata[@"status"] isEqualToString:@"fail"])
@@ -101,11 +112,11 @@
     NSURL * request = [[NSURL alloc] init];
     if([addressName isEqualToString:@""])
     {
-        request = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"https://block.io/api/v1/get_new_address/?api_key=%@",[self getApiKey]]];
+        request = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"https://block.io/api/v%d/get_new_address/?api_key=%@",[BlockIOHandler getVersion],[self getApiKey]]];
     }
     else
     {
-        request = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"https://block.io/api/v1/get_new_address/?api_key=%@&label=%@",[self getApiKey],addressName]];
+        request = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"https://block.io/api/v%d/get_new_address/?api_key=%@&label=%@",[BlockIOHandler getVersion],[self getApiKey],addressName]];
     }
     NSString * response = [self makeUrlRequest:request];
     NSMutableDictionary * addressdata;
@@ -128,6 +139,7 @@
         else
         {
             error = @"The network is not DOGE. You must have entered the wrong API key.";
+            return FALSE;
         }
     }
     else if([addressdata[@"status"] isEqualToString:@"fail"])
@@ -140,7 +152,7 @@
 }
 -(NSNumber*)getBalance
 {
-    NSURL * request = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"https://block.io/api/v1/get_balance/?api_key=%@",[self getApiKey]]];
+    NSURL * request = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"https://block.io/api/v%d/get_balance/?api_key=%@",[BlockIOHandler getVersion],[self getApiKey]]];
     NSLog(@"getBalance url: %@",[request absoluteString]);
     NSString * response = [self makeUrlRequest:request];
     NSLog(@"response: %@",response);
@@ -166,6 +178,7 @@
         else
         {
             error = @"The network is not DOGE. You must have entered the wrong API key.";
+            return FALSE;
         }
     }
     else if([balancedata[@"status"] isEqualToString:@"fail"])
@@ -179,7 +192,7 @@
 -(NSArray*)getAllAddresses
 {
     NSArray * addresses = [[NSArray alloc] initWithObjects:@"", nil];
-    NSURL * request = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"https://block.io/api/v1/get_my_addresses/?api_key=%@",[self getApiKey]]];
+    NSURL * request = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"https://block.io/api/v%d/get_my_addresses/?api_key=%@",[BlockIOHandler getVersion],[self getApiKey]]];
     NSString * response = [self makeUrlRequest:request];
     NSMutableDictionary * addressdata;
     if(response != nil)
@@ -202,6 +215,7 @@
         else
         {
             error = @"The network is not DOGE. You must have entered the wrong API key.";
+            return FALSE;
         }
     }
     else if([addressdata[@"status"] isEqualToString:@"fail"])
@@ -214,8 +228,13 @@
 }
 -(BOOL)makeDogeTransaction:(double)amount toAddress:(NSString*)address withPin:(NSString*)pin
 {
-    NSURL * request = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"https://block.io//api/v1/withdraw/?api_key=%@&amount=%.8f&payment_address=%@&pin=%@",[self getApiKey],amount,address,pin]];
-    NSString * response = [self makeUrlRequest:request];
+    NSURL * requestURL = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"https://block.io/api/v%d/withdraw/",[BlockIOHandler getVersion]]];
+    [[NSURLCache sharedURLCache] removeAllCachedResponses];
+    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:requestURL cachePolicy:0 timeoutInterval:15];
+    [request setHTTPMethod:@"POST"];
+    [request setHTTPBody:[[NSString stringWithFormat:@"api_key=%@&amount=%.8f&payment_address=%@&pin=%@",[self getApiKey],amount,address,pin] dataUsingEncoding:NSUTF8StringEncoding]];
+    NSData * reqdata = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    NSString * response = [[NSString alloc] initWithData:reqdata encoding:NSUTF8StringEncoding];
     NSMutableDictionary * transactiondata;
     if(response != nil)
     {

@@ -14,5 +14,6 @@
 {
     IBOutlet UIButton * unlinkButton;
     IBOutlet UILabel * announcementLabel;
+    IBOutlet UISwitch * blockIoSwitch;
 }
 @end

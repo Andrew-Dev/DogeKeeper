@@ -239,7 +239,7 @@
     NSDictionary * addressdata = [addresses objectAtIndex:indexPath.row];
     NSString * label = addressdata[@"label"];
     selectedWallet.title = label;
-    selectedWallet.isApi = TRUE;
+    selectedWallet.isApi = FALSE;
     [self performSegueWithIdentifier:@"walletApiDetailSegue" sender:nil];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }

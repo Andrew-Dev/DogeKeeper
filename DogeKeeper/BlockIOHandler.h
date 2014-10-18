@@ -14,7 +14,7 @@
     double networkfee;
 }
 -(BOOL)makeDogeTransaction:(double)amount toAddress:(NSString*)address withPin:(NSString*)pin;
--(NSString*)makeUrlRequest:(NSURL*)requestURL;
+-(NSString*)makeBlockIoRequest:(NSString*)action withParameters:(NSString*)requestBody;
 -(NSString*)getError;
 -(NSString*)getApiKey;
 -(double)getNetworkFee;
@@ -26,4 +26,7 @@
 -(NSString*)getTransactionID;
 -(NSNumber*)getBalance;
 -(BOOL)addNewAddress:(NSString*)addressName;
++(void)setVersion:(int)version;
++(int)getVersion;
+
 @end

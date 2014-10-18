@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BlockIOHandler.h"
 
 @interface WelcomeViewController : UIViewController
 

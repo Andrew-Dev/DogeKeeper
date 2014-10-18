@@ -33,7 +33,7 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    if([[NSUserDefaults standardUserDefaults] boolForKey:@"firstlaunch"] != TRUE)
+    if([[NSUserDefaults standardUserDefaults] boolForKey:@"firststart"] != TRUE)
     {
         [self performSegueWithIdentifier:@"IntroSegue" sender:nil];
         NSLog(@"first run");

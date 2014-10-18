@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
     [sendScroll addSubview:sendView];
+    sendView.frame = CGRectMake(sendView.frame.origin.x, sendView.frame.origin.y, [UIScreen mainScreen].bounds.size.width, sendView.frame.size.height);
     ((UIScrollView *)sendScroll).contentSize = sendView.frame.size;
     addressField.inputAccessoryView = keyboardBar;
     amountField.inputAccessoryView = keyboardBar;
@@ -176,6 +177,7 @@
     {
         code = [code stringByReplacingOccurrencesOfString:@"dogecoin:" withString:@""];
     }
+    NSLog(@"ehhh: %d",[[code componentsSeparatedByString:@"?"] count]);
     if([[code componentsSeparatedByString:@"?"] count]-1 == 1)
     {
         NSString * params = [[code componentsSeparatedByString:@"?"] objectAtIndex:1];

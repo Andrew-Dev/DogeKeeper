@@ -30,10 +30,36 @@
 {
     [self performSegueWithIdentifier:@"blockSegue" sender:sender];
 }
+- (IBAction)changeAPI:(id)sender {
+    if(blockIoSwitch.on == TRUE)
+    {
+        [BlockIOHandler setVersion:1];
+        NSLog(@"block.io version is NOW: %d",[BlockIOHandler getVersion]);
+
+    }
+    else
+    {
+        [BlockIOHandler setVersion:2];
+        NSLog(@"block.io version is NOW: %d",[BlockIOHandler getVersion]);
+    }
+    BlockIOHandler * api = [[BlockIOHandler alloc] init];
+    blockIoSwitch.enabled = ![api checkAccount];
+}
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     announcementLabel.hidden = TRUE;
+    NSLog(@"block.io version: %d",[BlockIOHandler getVersion]);
+    if([BlockIOHandler getVersion] == 2)
+    {
+        blockIoSwitch.on = FALSE;
+    }
+    else
+    {
+        blockIoSwitch.on = TRUE;
+    }
+    BlockIOHandler * api = [[BlockIOHandler alloc] init];
+    blockIoSwitch.enabled = ![api checkAccount];
 }
 -(void)viewDidAppear:(BOOL)animated
 {
@@ -62,12 +88,21 @@
     {
         unlinkButton.enabled = FALSE;
     }
+    NSLog(@"block.io version: %d",[BlockIOHandler getVersion]);
+    blockIoSwitch.enabled = ![api checkAccount];
+    if([BlockIOHandler getVersion] == 2)
+    {
+        blockIoSwitch.on = FALSE;
+    }
+    else
+    {
+        blockIoSwitch.on = TRUE;
+    }
 }
 -(IBAction)about:(id)sender
 {
     [self performSegueWithIdentifier:@"aboutSegue" sender:nil];
 }
-<<<<<<< HEAD
 -(IBAction)announcements:(id)sender
 {
     [self performSegueWithIdentifier:@"announcementSegue" sender:nil];
@@ -79,23 +114,7 @@
     UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Block.io Key Removed" message:@"Your Block.io Dogecoin Key has been removed from DogeKeeper." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
     unlinkButton.enabled = FALSE;
-=======
-- (IBAction)toggleFee:(id)sender
-{
-    [[NSUserDefaults standardUserDefaults] setBool:feeSwitch.on forKey:@"addfee"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-}
--(IBAction)removeApi:(id)sender
-{
-    if([api checkDogeAPIAccount])
-    {
-        NSLog(@"remove");
-        [api removeDogeAPIAccount];
-        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"DogeAPI Key Removed" message:@"Your DogeAPI Key has been removed from DogeKeeper." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alert show];
-        unlinkButton.enabled = FALSE;
-    }
->>>>>>> FETCH_HEAD
+    blockIoSwitch.enabled = TRUE;
 }
 - (void)didReceiveMemoryWarning
 {

@@ -32,7 +32,16 @@
 {
     //[[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"agreed"];
     //[[NSUserDefaults standardUserDefaults] synchronize];
-    [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"firstlaunch"];
+    BlockIOHandler * blockIo = [[BlockIOHandler alloc] init];
+    if([blockIo checkAccount] == TRUE)
+    {
+        [BlockIOHandler setVersion:1];
+    }
+    else
+    {
+        [BlockIOHandler setVersion:2];
+    }
+    [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"firststart"];
     [[NSUserDefaults standardUserDefaults] synchronize];
     [self dismissViewControllerAnimated:TRUE completion:nil];
 }

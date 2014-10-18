@@ -67,7 +67,7 @@
 }
 -(IBAction)SoChain:(id)sender
 {
-    [self openWebURL:@"http://chain.so"];
+    [self openWebURL:@"http://block.io"];
 }
 -(IBAction)bcscanner:(id)sender
 {

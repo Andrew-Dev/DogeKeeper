@@ -15,7 +15,6 @@
 		4911D6411926F25C009B9C5B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4911D63F1926F25C009B9C5B /* InfoPlist.strings */; };
 		4911D6431926F25C009B9C5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4911D6421926F25C009B9C5B /* main.m */; };
 		4911D6471926F25D009B9C5B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4911D6461926F25D009B9C5B /* AppDelegate.m */; };
-		4911D64A1926F25D009B9C5B /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4911D6481926F25D009B9C5B /* Main_iPhone.storyboard */; };
 		4911D6551926F25D009B9C5B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4911D6541926F25D009B9C5B /* Images.xcassets */; };
 		4911D65C1926F25D009B9C5B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4911D65B1926F25D009B9C5B /* XCTest.framework */; };
 		4911D65D1926F25D009B9C5B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4911D6361926F25C009B9C5B /* Foundation.framework */; };
@@ -27,13 +26,6 @@
 		4919797019897FED00147FC9 /* ExchangeRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4919796F19897FED00147FC9 /* ExchangeRateViewController.m */; };
 		491979731989807600147FC9 /* PriceHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 491979721989807600147FC9 /* PriceHandler.m */; };
 		493BF7A4196E305000947A05 /* lock-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 493BF7A3196E305000947A05 /* lock-32.png */; };
-		4940B91A196CE84C008D95CE /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 4940B90F196CE84C008D95CE /* .gitignore */; };
-		4940B91B196CE84C008D95CE /* AESCrypt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4940B911196CE84C008D95CE /* AESCrypt.m */; };
-		4940B91C196CE84C008D95CE /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4940B912196CE84C008D95CE /* LICENSE */; };
-		4940B91D196CE84C008D95CE /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4940B914196CE84C008D95CE /* NSData+Base64.m */; };
-		4940B91E196CE84C008D95CE /* NSData+CommonCrypto.m in Sources */ = {isa = PBXBuildFile; fileRef = 4940B916196CE84C008D95CE /* NSData+CommonCrypto.m */; };
-		4940B91F196CE84C008D95CE /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4940B918196CE84C008D95CE /* NSString+Base64.m */; };
-		4940B920196CE84C008D95CE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 4940B919196CE84C008D95CE /* README.md */; };
 		49448D3619468B6800765F66 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49448D3119468B6800765F66 /* AVFoundation.framework */; };
 		49448D3719468B6800765F66 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49448D3219468B6800765F66 /* CoreMedia.framework */; };
 		49448D3819468B6800765F66 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49448D3319468B6800765F66 /* CoreVideo.framework */; };
@@ -58,6 +50,7 @@
 		49A1CB66192AD8EE00D4EA5F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A1CB65192AD8EE00D4EA5F /* SettingsViewController.m */; };
 		49B82A1A194CE0FD00B9B4B6 /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B82A19194CE0FD00B9B4B6 /* HistoryViewController.m */; };
 		49B82A20194CED2100B9B4B6 /* WalletDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49B82A1F194CED2100B9B4B6 /* WalletDetailViewController.m */; };
+		49C4758719BFD85100965B9D /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49C4758619BFD85100965B9D /* Main_iPhone.storyboard */; };
 		49D0BBD1198AC08700945096 /* mp30.png in Resources */ = {isa = PBXBuildFile; fileRef = 49D0BBCF198AC08700945096 /* mp30.png */; };
 		49D0BBD2198AC08700945096 /* mp60.png in Resources */ = {isa = PBXBuildFile; fileRef = 49D0BBD0198AC08700945096 /* mp60.png */; };
 		49DDD478194E026200C3C6FD /* bitstream.c in Sources */ = {isa = PBXBuildFile; fileRef = 49DDD468194E026200C3C6FD /* bitstream.c */; };
@@ -68,7 +61,6 @@
 		49DDD47D194E026200C3C6FD /* rscode.c in Sources */ = {isa = PBXBuildFile; fileRef = 49DDD472194E026200C3C6FD /* rscode.c */; };
 		49DDD47E194E026200C3C6FD /* split.c in Sources */ = {isa = PBXBuildFile; fileRef = 49DDD474194E026200C3C6FD /* split.c */; };
 		49DDD47F194E026200C3C6FD /* UIImage+MDQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DDD477194E026200C3C6FD /* UIImage+MDQRCode.m */; };
-		49DDD484194E802000C3C6FD /* bar-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DDD480194E802000C3C6FD /* bar-128.png */; };
 		49DDD485194E802000C3C6FD /* money-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DDD481194E802000C3C6FD /* money-128.png */; };
 		49DDD486194E802000C3C6FD /* settings-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DDD482194E802000C3C6FD /* settings-128.png */; };
 		49DDD487194E802000C3C6FD /* wallet-128.png in Resources */ = {isa = PBXBuildFile; fileRef = 49DDD483194E802000C3C6FD /* wallet-128.png */; };
@@ -105,7 +97,6 @@
 		4911D6441926F25D009B9C5B /* DogeKeeper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DogeKeeper-Prefix.pch"; sourceTree = "<group>"; };
 		4911D6451926F25D009B9C5B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4911D6461926F25D009B9C5B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4911D6491926F25D009B9C5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		4911D6541926F25D009B9C5B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4911D65A1926F25D009B9C5B /* DogeKeeperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DogeKeeperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4911D65B1926F25D009B9C5B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -120,17 +111,6 @@
 		491979711989807600147FC9 /* PriceHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PriceHandler.h; path = ../PriceHandler.h; sourceTree = "<group>"; };
 		491979721989807600147FC9 /* PriceHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PriceHandler.m; path = ../PriceHandler.m; sourceTree = "<group>"; };
 		493BF7A3196E305000947A05 /* lock-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lock-32.png"; sourceTree = "<group>"; };
-		4940B90F196CE84C008D95CE /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		4940B910196CE84C008D95CE /* AESCrypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCrypt.h; sourceTree = "<group>"; };
-		4940B911196CE84C008D95CE /* AESCrypt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCrypt.m; sourceTree = "<group>"; };
-		4940B912196CE84C008D95CE /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		4940B913196CE84C008D95CE /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
-		4940B914196CE84C008D95CE /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
-		4940B915196CE84C008D95CE /* NSData+CommonCrypto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+CommonCrypto.h"; sourceTree = "<group>"; };
-		4940B916196CE84C008D95CE /* NSData+CommonCrypto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+CommonCrypto.m"; sourceTree = "<group>"; };
-		4940B917196CE84C008D95CE /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
-		4940B918196CE84C008D95CE /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
-		4940B919196CE84C008D95CE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		49448D3119468B6800765F66 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		49448D3219468B6800765F66 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		49448D3319468B6800765F66 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
@@ -173,6 +153,7 @@
 		49B82A19194CE0FD00B9B4B6 /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
 		49B82A1E194CED2100B9B4B6 /* WalletDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalletDetailViewController.h; sourceTree = "<group>"; };
 		49B82A1F194CED2100B9B4B6 /* WalletDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalletDetailViewController.m; sourceTree = "<group>"; };
+		49C4758619BFD85100965B9D /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		49D0BBCF198AC08700945096 /* mp30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mp30.png; sourceTree = "<group>"; };
 		49D0BBD0198AC08700945096 /* mp60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mp60.png; sourceTree = "<group>"; };
 		49DDD468194E026200C3C6FD /* bitstream.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bitstream.c; sourceTree = "<group>"; };
@@ -191,7 +172,6 @@
 		49DDD475194E026200C3C6FD /* split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = split.h; sourceTree = "<group>"; };
 		49DDD476194E026200C3C6FD /* UIImage+MDQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MDQRCode.h"; sourceTree = "<group>"; };
 		49DDD477194E026200C3C6FD /* UIImage+MDQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MDQRCode.m"; sourceTree = "<group>"; };
-		49DDD480194E802000C3C6FD /* bar-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar-128.png"; sourceTree = "<group>"; };
 		49DDD481194E802000C3C6FD /* money-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "money-128.png"; sourceTree = "<group>"; };
 		49DDD482194E802000C3C6FD /* settings-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-128.png"; sourceTree = "<group>"; };
 		49DDD483194E802000C3C6FD /* wallet-128.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "wallet-128.png"; sourceTree = "<group>"; };
@@ -276,12 +256,10 @@
 				49448D61194693F100765F66 /* Private */,
 				49448D5E1946913200765F66 /* BCScannerViewController.h */,
 				49448D5F1946913200765F66 /* BCScannerViewController.m */,
-				4940B90E196CE84C008D95CE /* AESCrypt */,
 				49DDD466194E026200C3C6FD /* QR */,
 				4911D6771927090B009B9C5B /* dogecoind.png */,
 				49E381D4194B83AD00E38558 /* donate.jpeg */,
 				498D03021943E731004BC0B0 /* dknobg.png */,
-				49DDD480194E802000C3C6FD /* bar-128.png */,
 				49DDD481194E802000C3C6FD /* money-128.png */,
 				49DDD482194E802000C3C6FD /* settings-128.png */,
 				49DDD483194E802000C3C6FD /* wallet-128.png */,
@@ -304,7 +282,7 @@
 				494C4C7E192C1D9A00545434 /* DogecoinWallet.m */,
 				499705D71927D6CE00C53D78 /* DogeTransaction.h */,
 				499705D81927D6CE00C53D78 /* DogeTransaction.m */,
-				4911D6481926F25D009B9C5B /* Main_iPhone.storyboard */,
+				49C4758619BFD85100965B9D /* Main_iPhone.storyboard */,
 				499705E91927E82D00C53D78 /* DogeViewController.h */,
 				499705EA1927E82D00C53D78 /* DogeViewController.m */,
 				4919796E19897FED00147FC9 /* ExchangeRateViewController.h */,
@@ -370,24 +348,6 @@
 				4911D6641926F25D009B9C5B /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4940B90E196CE84C008D95CE /* AESCrypt */ = {
-			isa = PBXGroup;
-			children = (
-				4940B90F196CE84C008D95CE /* .gitignore */,
-				4940B910196CE84C008D95CE /* AESCrypt.h */,
-				4940B911196CE84C008D95CE /* AESCrypt.m */,
-				4940B912196CE84C008D95CE /* LICENSE */,
-				4940B913196CE84C008D95CE /* NSData+Base64.h */,
-				4940B914196CE84C008D95CE /* NSData+Base64.m */,
-				4940B915196CE84C008D95CE /* NSData+CommonCrypto.h */,
-				4940B916196CE84C008D95CE /* NSData+CommonCrypto.m */,
-				4940B917196CE84C008D95CE /* NSString+Base64.h */,
-				4940B918196CE84C008D95CE /* NSString+Base64.m */,
-				4940B919196CE84C008D95CE /* README.md */,
-			);
-			path = AESCrypt;
 			sourceTree = "<group>";
 		};
 		49448D61194693F100765F66 /* Private */ = {
@@ -511,7 +471,6 @@
 			files = (
 				49DDD485194E802000C3C6FD /* money-128.png in Resources */,
 				49E381D5194B83AE00E38558 /* donate.jpeg in Resources */,
-				49DDD484194E802000C3C6FD /* bar-128.png in Resources */,
 				498D03031943E731004BC0B0 /* dknobg.png in Resources */,
 				4911D6781927090B009B9C5B /* dogecoind.png in Resources */,
 				4911D6551926F25D009B9C5B /* Images.xcassets in Resources */,
@@ -520,14 +479,11 @@
 				49DDD48B194E80D100C3C6FD /* wallet-32.png in Resources */,
 				49DDD48D194E80DD00C3C6FD /* settings-32.png in Resources */,
 				49DDD486194E802000C3C6FD /* settings-128.png in Resources */,
-				4940B91C196CE84C008D95CE /* LICENSE in Resources */,
-				4940B920196CE84C008D95CE /* README.md in Resources */,
+				49C4758719BFD85100965B9D /* Main_iPhone.storyboard in Resources */,
 				49D0BBD1198AC08700945096 /* mp30.png in Resources */,
-				4940B91A196CE84C008D95CE /* .gitignore in Resources */,
 				493BF7A4196E305000947A05 /* lock-32.png in Resources */,
 				49DDD489194E809000C3C6FD /* money-32.png in Resources */,
 				49DDD48F194E811000C3C6FD /* line_chart-32.png in Resources */,
-				4911D64A1926F25D009B9C5B /* Main_iPhone.storyboard in Resources */,
 				4911D6411926F25C009B9C5B /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -553,7 +509,6 @@
 				4919796D19897DFE00147FC9 /* ExchangeViewController.m in Sources */,
 				4946E687198448A20039888F /* BlockIOHandler.m in Sources */,
 				49A1CB66192AD8EE00D4EA5F /* SettingsViewController.m in Sources */,
-				4940B91E196CE84C008D95CE /* NSData+CommonCrypto.m in Sources */,
 				49DDD47D194E026200C3C6FD /* rscode.c in Sources */,
 				494C4C79192C1D8500545434 /* AddWalletViewController.m in Sources */,
 				49DDD478194E026200C3C6FD /* bitstream.c in Sources */,
@@ -564,10 +519,8 @@
 				490B0DD41988384000154F92 /* AnnouncementViewController.m in Sources */,
 				491979731989807600147FC9 /* PriceHandler.m in Sources */,
 				49DDD479194E026200C3C6FD /* mask.c in Sources */,
-				4940B91D196CE84C008D95CE /* NSData+Base64.m in Sources */,
 				499705D91927D6CE00C53D78 /* DogeTransaction.m in Sources */,
 				49DDD47B194E026200C3C6FD /* qrinput.c in Sources */,
-				4940B91B196CE84C008D95CE /* AESCrypt.m in Sources */,
 				49B82A20194CED2100B9B4B6 /* WalletDetailViewController.m in Sources */,
 				49DDD47F194E026200C3C6FD /* UIImage+MDQRCode.m in Sources */,
 				49FCD6B51985D7A600D336C4 /* BlockIoKeyController.m in Sources */,
@@ -584,7 +537,6 @@
 				490B0DDA19883A0400154F92 /* AnnouncementHandler.m in Sources */,
 				4911D6431926F25C009B9C5B /* main.m in Sources */,
 				499705EB1927E82D00C53D78 /* DogeViewController.m in Sources */,
-				4940B91F196CE84C008D95CE /* NSString+Base64.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,14 +565,6 @@
 				4911D6401926F25C009B9C5B /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		4911D6481926F25D009B9C5B /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4911D6491926F25D009B9C5B /* Base */,
-			);
-			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		4911D6641926F25D009B9C5B /* InfoPlist.strings */ = {
@@ -710,9 +654,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Paul Arpasi (NJKXF7XV99)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Paul Arpasi (NJKXF7XV99)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Paul Arpasi (9WJG533WGS)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DogeKeeper/DogeKeeper-Prefix.pch";
 				INFOPLIST_FILE = "DogeKeeper/DogeKeeper-Info.plist";
@@ -728,9 +672,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-1";
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Paul Arpasi (NJKXF7XV99)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Paul Arpasi (NJKXF7XV99)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Paul Arpasi (9WJG533WGS)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DogeKeeper/DogeKeeper-Prefix.pch";
 				INFOPLIST_FILE = "DogeKeeper/DogeKeeper-Info.plist";
