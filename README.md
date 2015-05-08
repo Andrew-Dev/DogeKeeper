@@ -1,7 +1,7 @@
 DogeKeeper
 ==========
 
-An iOS Dogecoin wallet that uses Block.io to send transactions. See http://dogekeeper.com
+An iOS Dogecoin wallet that uses Block.io to send transactions. See http://dogekeeper.andrewarpasi.com
 
 ###License Details
 All content created by Andrew Arpasi in this project is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License](http://creativecommons.org/licenses/by-nc-nd/4.0/) found in LICENSE.md. THIS MEANS YOU CANNOT DISTRIBUTE MODIFIED CODE OR USE ANY OF MY CODE FOR COMMERCIAL OR MONETARY PURPOSES. You can however, use the unmodified code in your non-commercial projects, as long as there is proper attribution.
